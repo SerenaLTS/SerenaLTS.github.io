@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://serenalts.github.io/sitemap_index.xml
+# 指定 XML sitemap（即使 Google 读不到，Bing 仍然会用）
+Sitemap: https://serenalts.github.io/sitemap.xml
+
+# 备用：声明 HTML sitemap 页面
+Sitemap: https://serenalts.github.io/sitemap.html

@@ -125,89 +125,72 @@
   </section>
 
 
-  <style>
-  /* SEO Section 样式 */
-  .seo-section {
-    background-color: #f9fafb; /* 浅灰背景 */
-    border-radius: 8px;
-    padding: 20px;
-    margin: 30px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-
-  .seo-section h2 {
-    font-size: 1.2rem;
-    margin: 0;
-    cursor: pointer;
-    padding: 12px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    transition: background 0.3s;
-  }
-
-  .seo-section h2:hover {
-    background: #f3f4f6;
-  }
-
-  .seo-content {
-    display: none;
-    padding: 15px;
-    font-size: 0.95rem;
-    color: #374151;
-    line-height: 1.6;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    margin-top: 8px;
-  }
-
-  .seo-content.active {
-    display: block;
-  }
-  </style>
+  <!-- SEO 文字扩展（Accordion 风格，统一深蓝×金色主题） -->
+  <section id="seo" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-brand">小狗饼干深度解读</h2>
+        <p class="text-muted">品牌故事 · 选择理由 · 未来趋势</p>
+      </div>
+      <div class="accordion shadow-soft rounded-4" id="seoAccordion">
   
-  <div class="seo-section">
-    <h2 onclick="toggleContent('story')">小狗饼干的故事与魅力</h2>
-    <div id="story" class="seo-content">
-      <p>
-        小狗饼干是一种近年来逐渐受到欢迎的特色零食。与普通饼干不同，
-        小狗饼干在口感上更酥脆轻盈，入口即化，带有独特的奶香与谷物香气。
-        很多消费者表示，小狗饼干不仅是一种零食，更是一种陪伴感，适合
-        在学习、工作或休闲时随手享用。它既可以单独食用，也可以搭配
-        咖啡、牛奶甚至茶饮，丰富口感的同时让小狗饼干成为生活中的小确幸。
-      </p>
+        <!-- 故事 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingStory">
+            <button class="accordion-button fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStory" aria-expanded="true" aria-controls="collapseStory">
+              小狗饼干的故事与魅力
+            </button>
+          </h2>
+          <div id="collapseStory" class="accordion-collapse collapse show" aria-labelledby="headingStory" data-bs-parent="#seoAccordion">
+            <div class="accordion-body">
+              小狗饼干是一种近年来逐渐受到欢迎的特色零食。与普通饼干不同，
+              它在口感上更酥脆轻盈，入口即化，带有独特的奶香与谷物香气。
+              许多消费者表示，小狗饼干不仅是一种零食，更是一种陪伴感，
+              适合在学习、工作或休闲时随手享用。它既可以单独食用，也可以搭配
+              咖啡、牛奶甚至茶饮，丰富口感的同时让小狗饼干成为生活中的小确幸。
+            </div>
+          </div>
+        </div>
+  
+        <!-- 选择理由 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingWhy">
+            <button class="accordion-button collapsed fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhy" aria-expanded="false" aria-controls="collapseWhy">
+              为什么选择小狗饼干
+            </button>
+          </h2>
+          <div id="collapseWhy" class="accordion-collapse collapse" aria-labelledby="headingWhy" data-bs-parent="#seoAccordion">
+            <div class="accordion-body">
+              选择小狗饼干，不仅是因为它的美味，还因为它背后代表的健康与乐趣。
+              在配料上，小狗饼干通常采用低糖或天然甜味剂，更加符合现代人追求
+              轻负担饮食的趋势。对于孩子和年轻人来说，它既能满足味蕾，
+              又不会带来过多负担。而在社交分享的场合，小狗饼干常常被当作
+              礼物或聚会零食，带来轻松愉快的氛围。无论是学习伴侣，还是工作间隙的小点心，
+              小狗饼干都展现了它的独特价值。
+            </div>
+          </div>
+        </div>
+  
+        <!-- 未来趋势 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFuture">
+            <button class="accordion-button collapsed fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFuture" aria-expanded="false" aria-controls="collapseFuture">
+              小狗饼干的未来
+            </button>
+          </h2>
+          <div id="collapseFuture" class="accordion-collapse collapse" aria-labelledby="headingFuture" data-bs-parent="#seoAccordion">
+            <div class="accordion-body">
+              随着健康零食的流行，小狗饼干未来有望推出更多新品类，比如全麦版、
+              高蛋白版或低卡版，满足不同人群的需求。通过不断创新，小狗饼干正逐渐
+              成为兼顾美味与健康的零食代表。如果你正在寻找一款既美味又能
+              带来快乐的点心，小狗饼干无疑是一个值得尝试的选择。
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
-  
-    <h2 onclick="toggleContent('why')">为什么选择小狗饼干</h2>
-    <div id="why" class="seo-content">
-      <p>
-        选择小狗饼干，不仅是因为它的美味，还因为它背后代表的健康与乐趣。
-        在配料上，小狗饼干通常采用低糖或天然甜味剂，更加符合现代人追求
-        轻负担饮食的趋势。对于孩子和年轻人来说，小狗饼干既能满足味蕾，
-        又不会带来过多负担。而在社交分享场合，小狗饼干也常常被当作礼物
-        或聚会零食，带来轻松愉快的氛围。无论是作为学习伙伴，还是工作间
-        隙的小点心，小狗饼干都展现了它的独特价值。
-      </p>
-    </div>
-  
-    <h2 onclick="toggleContent('future')">小狗饼干的未来</h2>
-    <div id="future" class="seo-content">
-      <p>
-        随着健康零食的流行，小狗饼干未来有望推出更多新品类，比如全麦版、
-        高蛋白版或低卡版，满足不同人群的需求。通过不断创新，小狗饼干正在
-        成为一个兼顾美味与健康的零食代表。如果你正在寻找一款既美味又能
-        带来快乐的点心，小狗饼干无疑是一个值得尝试的选择。
-      </p>
-    </div>
-  </div>
-  
-  <script>
-    function toggleContent(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle("active");
-    }
-  </script>
+  </section>
 
   <!-- 产品矩阵 -->
   <section id="products" class="py-5 bg-light">

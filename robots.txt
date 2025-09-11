@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://serenalts.github.io/sitemap.xml
+
+Sitemap: https://serenalts.github.io/sitemap_index.xml

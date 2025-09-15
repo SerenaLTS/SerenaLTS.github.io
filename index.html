@@ -16,30 +16,65 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- 结构化数据：Organization + WebPage + Product（保留） -->
-  <script type="application/ld+json">
+ <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
         "name": "小狗食品（中国）有限公司",
-        "url": "https://SerenaLTS.github.io/",
-        "logo": "https://SerenaLTS.github.io/logo.png"
+        "url": "https://serenalts.github.io/",
+        "logo": "https://serenalts.github.io/assets/logo.png"
       },
       {
         "@type": "WebPage",
         "name": "小狗饼干",
         "description": "中国新生代网红酵素饼干",
-        "url": "https://SerenaLTS.github.io/"
+        "url": "https://serenalts.github.io/"
       },
       {
         "@type": "Product",
         "name": "小狗脆脆饼",
-        "brand": {"@type":"Brand","name":"小狗牌"},
-        "description": "酥脆轻盈、入口即化，含小分子益宠酵素，适合学习加班与观影时刻。",
+        "brand": { "@type": "Brand", "name": "小狗牌" },
+        "description": "酥脆轻盈、入口即化，含小分子益宠酵素，适合学习、加班与观影时刻。",
         "sku": "XGBG-CC-001",
-        "offers": {"@type":"Offer","priceCurrency":"CNY","price":"9.90","availability":"https://schema.org/InStock"},
-        "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"2571"}
+        "url": "https://serenalts.github.io/#products",
+        "image": [
+          "https://serenalts.github.io/assets/image.png"   
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "9.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "CNY"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime":  { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "2571"
+        }
       }
     ]
   }

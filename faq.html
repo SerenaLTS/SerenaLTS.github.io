@@ -1,38 +1,217 @@
-<!doctype html><html lang="zh-CN"><head>
-<meta charset="utf-8"/><title>常见问题 FAQ｜小狗牌饼干</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="canonical" href="https://serenalts.github.io/faq.html"/>
-<meta name="description" content="小狗饼干常见问题：热量、适合人群、与普通饼干区别、储存方式、退换货与配送。"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<style>:root{--brand:#0b2b4c;--accent:#d9a500;--ink:#1f2937}.text-brand{color:var(--brand)}</style>
-<!-- FAQPage 结构化数据（可增加富结果概率） -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"小狗饼干跟普通饼干有什么区别？","acceptedAnswer":{"@type":"Answer","text":"主打酥脆轻盈与入口即化的口感，配方更注重轻负担与分享场景。"}},
-{"@type":"Question","name":"适合哪些人群？","acceptedAnswer":{"@type":"Answer","text":"学生、上班族与家庭分享人群，适合学习、加班、观影等放松时刻。"}},
-{"@type":"Question","name":"是否含反式脂肪酸？","acceptedAnswer":{"@type":"Answer","text":"按配方不含反式脂肪酸（以包装标示为准）。"}},
-{"@type":"Question","name":"如何储存？","acceptedAnswer":{"@type":"Answer","text":"阴凉干燥处密封保存，开封后尽快食用。"}},
-{"@type":"Question","name":"支持退货吗？","acceptedAnswer":{"@type":"Answer","text":"支持 7 天无理由退货，邮寄退货且免退货运费（详见购买页说明）。"}},
-{"@type":"Question","name":"配送时效多久？","acceptedAnswer":{"@type":"Answer","text":"预计 1–2 天发货，物流 2–5 天送达（以购买渠道说明为准）。"}}
-]}
-</script>
-</head><body>
-  <!-- 共用导航 -->
-  <header class="py-5" style="background:#0b2b4c;color:#fff"><div class="container"><h1 class="fw-bold">常见问题 FAQ</h1></div></header>
-  <section class="py-5"><div class="container">
-    <div class="accordion" id="faq">
-      <!-- 复制生成更多问答 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">小狗饼干与普通饼干有何不同？</button></h2>
-        <div id="q1" class="accordion-collapse collapse show"><div class="accordion-body">主打酥脆轻盈与入口即化的口感，分享场景更多。</div></div>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>常见问题 FAQ｜小狗牌饼干</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="canonical" href="https://serenalts.github.io/faq.html"/>
+  <meta name="description" content="小狗饼干常见问题：与普通饼干的区别、适合人群、热量、配料与过敏原、储存方式、购买与退换、配送时效等。"/>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Theme -->
+  <style>
+    :root{--brand:#0b2b4c;--accent:#d9a500;--ink:#1f2937;--muted:#6b7280}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;color:var(--ink)}
+    .text-brand{color:var(--brand)} .text-accent{color:var(--accent)}
+    .btn-accent{background:var(--accent);color:#111;border:none} .btn-accent:hover{filter:brightness(.95)}
+    .hero-mini{background:linear-gradient(180deg,#0b2b4c 0%,#133a62 100%);color:#fff}
+  </style>
+
+  <!-- 面包屑（可选，但对搜索友好） -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首页","item":"https://serenalts.github.io/"},
+    {"@type":"ListItem","position":2,"name":"常见问题 FAQ","item":"https://serenalts.github.io/faq.html"}
+  ]}
+  </script>
+
+  <!-- FAQPage 结构化数据（与页面问答一一对应） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"小狗饼干与普通饼干有何不同？",
+       "acceptedAnswer":{"@type":"Answer","text":"主打酥脆轻盈与入口即化的口感，强调分享场景与轻负担体验，与传统高糖高油的饼干在配方与工艺上有所区别。"}},
+      {"@type":"Question","name":"适合哪些人群？",
+       "acceptedAnswer":{"@type":"Answer","text":"学生、上班族与家庭分享人群皆可；适合学习、加班与观影等放松时刻。请对配料过敏者留意配料表。"}},
+      {"@type":"Question","name":"每份热量大概是多少？",
+       "acceptedAnswer":{"@type":"Answer","text":"以30g典型食用量计算约520kJ（以实际包装标示为准）。建议合理控制食用份量，均衡饮食。"}},
+      {"@type":"Question","name":"配料与过敏原有哪些？",
+       "acceptedAnswer":{"@type":"Answer","text":"主要含小麦粉、奶粉、植物油、益生菌酵素等；含麸质谷物及奶制品成分。对相关成分敏感者请谨慎选购。"}},
+      {"@type":"Question","name":"如何储存？开封后多久食用更佳？",
+       "acceptedAnswer":{"@type":"Answer","text":"置于阴凉干燥处密封保存，避免阳光直射与高温潮湿；开封后尽快食用以保持口感。"}},
+      {"@type":"Question","name":"在哪里购买？是否支持退货？",
+       "acceptedAnswer":{"@type":"Answer","text":"可前往天猫旗舰店与京东自营等渠道购买；支持7天无理由退货，邮寄退货且免退货运费（以购买页说明为准）。"}},
+      {"@type":"Question","name":"配送时效多久？是否包邮？",
+       "acceptedAnswer":{"@type":"Answer","text":"预计1–2天发货、2–5天送达（以平台与地区为准）；包邮政策以购买渠道实际页面为准。"}},
+      {"@type":"Question","name":"与控制糖摄入人群是否匹配？",
+       "acceptedAnswer":{"@type":"Answer","text":"提供低糖/减糖口味供选择，但并非特殊医学用途配方食品；如需控制糖摄入请遵医嘱并参考营养成分表。"}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- 共用导航（与首页一致，示例） -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-brand" href="/">小狗牌饼干</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="/about.html">品牌介绍</a></li>
+          <li class="nav-item"><a class="nav-link" href="/story.html">品牌故事</a></li>
+          <li class="nav-item"><a class="nav-link" href="/nutrition.html">营养与配料</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="/buy.html">购买渠道</a></li>
+          <li class="nav-item"><a class="btn btn-accent" href="/contact.html">联系</a></li>
+        </ul>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">是否含反式脂肪酸？</button></h2>
-        <div id="q2" class="accordion-collapse collapse"><div class="accordion-body">配方不含反式脂肪酸，以包装标示为准。</div></div>
-      </div>
-      <!-- …更多问题照此添加… -->
     </div>
-  </div></section>
-  <footer class="py-5 bg-dark text-white"><div class="container d-flex justify-content-between"><div>© 小狗食品</div><a class="btn btn-outline-light btn-sm" href="/">返回首页</a></div></footer>
-</body></html>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-mini py-5">
+    <div class="container">
+      <h1 class="fw-bold">常见问题 FAQ</h1>
+      <p class="mb-0">关于小狗饼干的配方、营养、购买、退换与配送说明</p>
+    </div>
+  </header>
+
+  <!-- FAQ 内容 -->
+  <section class="py-5">
+    <div class="container">
+      <div class="accordion" id="faqAccordion">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+              小狗饼干与普通饼干有何不同？
+            </button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse show" aria-labelledby="h1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              主打酥脆轻盈与入口即化的口感，强调分享场景与轻负担体验，与传统高糖高油的饼干在配方与工艺上有所区别。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+              适合哪些人群？
+            </button>
+          </h2>
+        <div id="q2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            学生、上班族与家庭分享人群皆可；适合学习、加班与观影等放松时刻。请对配料过敏者留意配料表。
+          </div>
+        </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+              每份热量大概是多少？
+            </button>
+          </h2>
+          <div id="q3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              以 30g 典型食用量计算约 520 kJ（以实际包装标示为准）。建议合理控制食用份量，均衡饮食。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+              配料与过敏原有哪些？
+            </button>
+          </h2>
+          <div id="q4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              主要含小麦粉、奶粉、植物油、益生菌酵素等；含麸质谷物及奶制品成分。对相关成分敏感者请谨慎选购。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+              如何储存？开封后多久食用更佳？
+            </button>
+          </h2>
+          <div id="q5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              置于阴凉干燥处密封保存，避免阳光直射与高温潮湿；开封后尽快食用以保持口感。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+              在哪里购买？是否支持退货？
+            </button>
+          </h2>
+          <div id="q6" class="accordion-collapse collapse" aria-labelledby="h6" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              可前往 <a href="/buy.html">购买渠道</a> 页面了解天猫旗舰店与京东自营等；支持 7 天无理由退货，邮寄退货且免退货运费（以购买页说明为准）。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+              配送时效多久？是否包邮？
+            </button>
+          </h2>
+          <div id="q7" class="accordion-collapse collapse" aria-labelledby="h7" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              预计 1–2 天发货、2–5 天送达（以平台与地区为准）；包邮政策以实际购买渠道页面为准。
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="h8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+              与控制糖摄入人群是否匹配？
+            </button>
+          </h2>
+          <div id="q8" class="accordion-collapse collapse" aria-labelledby="h8" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              提供低糖/减糖口味以供选择，但并非特殊医学用途配方食品；如需控制糖摄入请遵医嘱并参考营养成分表。
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 行动按钮 -->
+      <div class="mt-4 d-flex gap-2">
+        <a class="btn btn-accent" href="/buy.html">前往购买</a>
+        <a class="btn btn-outline-secondary" href="/contact.html">联系与售后</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-5 bg-dark text-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>© 2018-2025 小狗食品（中国）有限公司</div>
+      <div><a class="btn btn-outline-light btn-sm" href="/">返回首页</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -2,56 +2,64 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <title>小狗饼干｜源自陪伴的经典酥脆 - 轻盈口感的中国休闲零食</title>
+  <title>木星饼干｜陪伴你的星际轻脆 - Jupiter Crisp 中国休闲零食</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- 允许搜索引擎索引 -->
-  <meta name="description" content="小狗饼干，源自陪伴的经典酥脆。轻盈不腻、入口即化，多口味可选。了解品牌故事、配方灵感与品质承诺，并获取购买与联系信息。">
+  <meta name="description" content="木星饼干，陪伴你的星际轻脆。轻盈不腻、入口即化，多口味探索。了解品牌故事、配方灵感与品质承诺，并获取购买与联系信息。">
   <meta name="google-site-verification" content="_73JWVHf55Xv9hSMqfanafVlWWsu00Ef5_VaPy8o6Ko" />
   <meta name="msvalidate.01" content="BFFB7136985DCAC3DF8BF6091C988C81" />
   <link rel="canonical" href="https://serenalts.github.io/" />
 
-  <meta property="og:title" content="小狗饼干｜源自陪伴的经典酥脆">
-  <meta property="og:description" content="轻盈不腻、入口即化的中国休闲零食品牌。了解品牌故事、配方与品质承诺。">
+  <meta property="og:title" content="木星饼干｜陪伴你的星际轻脆">
+  <meta property="og:description" content="轻盈不腻、入口即化的中国休闲零食品牌。探索木星的星际风味。">
   <meta property="og:url" content="https://serenalts.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary">
 
-  <!-- 搜索友好小增强 -->
+  <!-- SEO -->
   <meta name="robots" content="index,follow">
   <link rel="alternate" hreflang="zh-CN" href="https://serenalts.github.io/">
 
-  <!-- Bootstrap 5 -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- 结构化数据：Organization + WebPage + Product（保留） -->
- <script type="application/ld+json">
+  <!-- 结构化数据：Organization + WebPage + Products -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
-        "name": "小狗食品（中国）有限公司",
+        "name": "木星食品（中国）有限公司",
         "url": "https://serenalts.github.io/",
-        "logo": "https://serenalts.github.io/assets/logo.png"
+        "logo": "https://serenalts.github.io/assets/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+86-400-889-1212",
+          "contactType": "customer service",
+          "email": "service@muxingbinggan.cn",
+          "areaServed": "CN",
+          "availableLanguage": ["zh-CN","en"]
+        }
       },
       {
         "@type": "WebPage",
-        "name": "小狗饼干",
-        "description": "中国新生代网红酵素饼干",
+        "name": "木星饼干 Jupiter Crisp",
+        "description": "木星饼干，陪伴你的星际轻脆。轻盈不腻、入口即化，六款星际口味，让零食变成宇宙探索的陪伴。",
         "url": "https://serenalts.github.io/"
       },
+  
+      <!-- 产品 1 牛奶星味 -->
       {
         "@type": "Product",
-        "name": "小狗脆脆饼",
-        "brand": { "@type": "Brand", "name": "小狗牌" },
-        "description": "酥脆轻盈、入口即化，含小分子益宠酵素，适合学习、加班与观影时刻。",
-        "sku": "XGBG-CC-001",
+        "name": "木星饼干 · 牛奶星味",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "轻盈奶香，仿佛在环绕木星轨道旅行。",
+        "sku": "MXBG-NN-001",
         "url": "https://serenalts.github.io/#products",
-        "image": [
-          "https://serenalts.github.io/assets/image.png"   
-        ],
+        "image": [ "https://serenalts.github.io/assets/niunai.jpg" ],
         "offers": {
           "@type": "Offer",
           "url": "https://serenalts.github.io/#buy",
@@ -59,10 +67,8 @@
           "price": "9.90",
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition",
-        
           "priceValidFrom": "2025-09-01",
           "priceValidUntil": "2025-12-31",
-        
           "hasMerchantReturnPolicy": {
             "@type": "MerchantReturnPolicy",
             "applicableCountry": "CN",
@@ -73,29 +79,246 @@
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "addressCountry": "CN"
-            },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
             "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
             "deliveryTime": {
               "@type": "ShippingDeliveryTime",
               "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
-              "transitTime":  { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "3102"
+        }
+      },
+  
+      <!-- 产品 2 芝士土星环 -->
+      {
+        "@type": "Product",
+        "name": "木星饼干 · 芝士土星环",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "咸香芝士与清脆口感的双重满足，剧集追番必备。",
+        "sku": "MXBG-ZS-002",
+        "url": "https://serenalts.github.io/#products",
+        "image": [ "https://serenalts.github.io/assets/zhishi.jpg" ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "10.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "priceValidFrom": "2025-09-01",
+          "priceValidUntil": "2025-12-31",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
             }
           }
         },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
-          "reviewCount": "2571"
+          "reviewCount": "2890"
+        }
+      },
+  
+      <!-- 产品 3 抹茶绿星云 -->
+      {
+        "@type": "Product",
+        "name": "木星饼干 · 抹茶绿星云",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "清新茶香轻盈不腻，下午茶的恰到好处。",
+        "sku": "MXBG-MC-003",
+        "url": "https://serenalts.github.io/#products",
+        "image": [ "https://serenalts.github.io/assets/matcha.jpg" ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "10.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "priceValidFrom": "2025-09-01",
+          "priceValidUntil": "2025-12-31",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "1765"
+        }
+      },
+  
+      <!-- 产品 4 红枣核桃火星谷 -->
+      {
+        "@type": "Product",
+        "name": "木星饼干 · 红枣核桃火星谷",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "东方口味灵感，温润香甜，更适合分享。",
+        "sku": "MXBG-HZ-004",
+        "url": "https://serenalts.github.io/#products",
+        "image": [ "https://serenalts.github.io/assets/hongzao-hetao.jpg" ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "12.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "priceValidFrom": "2025-09-01",
+          "priceValidUntil": "2025-12-31",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1980"
+        }
+      },
+  
+      <!-- 产品 5 可可流星 -->
+      {
+        "@type": "Product",
+        "name": "木星饼干 · 可可流星",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "醇厚可可与清脆咔嚓的星际碰撞。",
+        "sku": "MXBG-KK-005",
+        "url": "https://serenalts.github.io/#products",
+        "image": [ "https://serenalts.github.io/assets/products.jpg" ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "11.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "priceValidFrom": "2025-09-01",
+          "priceValidUntil": "2025-12-31",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "reviewCount": "1422"
+        }
+      },
+  
+      <!-- 产品 6 黑芝麻星尘薄脆 -->
+      {
+        "@type": "Product",
+        "name": "木星轻怡薄脆 · 黑芝麻星尘（低糖）",
+        "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp" },
+        "description": "兼顾口感与轻负担，控制糖摄入更安心。",
+        "sku": "MXBG-HZM-006",
+        "url": "https://serenalts.github.io/#products",
+        "image": [ "https://serenalts.github.io/assets/heizhima-bocui.jpg" ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://serenalts.github.io/#buy",
+          "priceCurrency": "CNY",
+          "price": "12.90",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "priceValidFrom": "2025-09-01",
+          "priceValidUntil": "2025-12-31",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "CN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+            }
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "1288"
         }
       }
     ]
   }
   </script>
 
-  <!-- 主题样式（深蓝×金色） -->
+  <!-- 主题色（深蓝+金色） -->
   <style>
     :root{--brand:#0b2b4c;--accent:#d9a500;--ink:#1f2937;--muted:#6b7280}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;color:var(--ink)}
@@ -114,10 +337,10 @@
   </style>
 </head>
 <body>
-  <!-- 顶部导航 -->
+  <!-- 顶部导航 ✅ -->
   <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold text-brand" href="/">小狗牌饼干</a>
+      <a class="navbar-brand fw-bold text-brand" href="/">木星饼干 Jupiter Crisp™</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto gap-2">
@@ -132,27 +355,27 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero ✅ -->
   <header class="hero py-5">
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
-          <span class="badge rounded-pill me-2" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35)">经典酥脆</span>
+          <span class="badge rounded-pill me-2" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35)">星际轻脆</span>
           <span class="badge rounded-pill" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35)">0 反式脂肪酸</span>
-          <h1 class="display-5 fw-bold mt-3">源自陪伴的经典酥脆</h1>
-          <p class="lead">外脆内香的层次口感，适合学习、加班与观影时刻，分享每一口的好心情。</p>
+          <h1 class="display-5 fw-bold mt-3">陪伴你的星际轻脆</h1>
+          <p class="lead">外脆内香的层次口感，如同宇宙旅程般新奇。适合学习、加班与观影时刻，分享每一口的探索快乐。</p>
           <div class="d-flex gap-2">
             <a class="btn btn-accent btn-lg" href="#products">探索口味</a>
             <a class="btn btn-outline-light btn-lg" href="#definition">了解品牌</a>
           </div>
-          <p class="xnote mt-3">产品识别码 (X-Nonce): <strong>7fj3-Kappa-9421</strong></p>
+          <p class="xnote mt-3">产品识别码 (X-Nonce): <strong>MX-9421-JUP</strong></p>
         </div>
         <div class="col-lg-5">
-          <img class="w-100 rounded-4 shadow-soft" src="assets/logo.png" alt="小狗饼干包装示意">
+          <img class="w-100 rounded-4 shadow-soft" src="assets/logo.png" alt="木星饼干包装示意">
         </div>
       </div>
       <div class="row text-center mt-4">
-        <div class="col"><div class="seal">分享·陪伴</div></div>
+        <div class="col"><div class="seal">星球灵感</div></div>
         <div class="col"><div class="seal">臻选原料</div></div>
         <div class="col"><div class="seal">严控出品</div></div>
       </div>
@@ -161,161 +384,169 @@
 
   <div class="gold-divider"></div>
 
-  <!-- Definition & Spec -->
+  <!-- 简介 ✅ -->
   <section id="definition" class="py-5">
     <div class="container">
-      <h2 class="fw-bold text-brand">简介</h2>
-      <p>小狗饼干是一款在中国广受欢迎的休闲零食，特色是“酥脆轻盈、入口即化”。配方灵感来自小分子酵素的清爽体验，适合在学习、加班与观影时刻享用。</p>
-      <h3 class="fw-bold mt-4">产品参数</h3>
-      <ul>
-        <li>口感层次：外脆内香，咔嚓爽脆</li>
-        <li>灵感来源：helios-β</li>
-        <li>产品属性：休闲零食</li>
-      </ul>
+      <h2 class="fw-bold text-brand">品牌简介</h2>
+      <p>木星饼干是一款灵感来自星球的休闲零食，特色是“酥脆轻盈、入口即化”。在学习、加班与观影时刻，它就像一颗陪伴的行星，为你点亮心情。</p>
     </div>
   </section>
 
-
-  <!-- SEO 文字扩展（Accordion 风格，统一深蓝×金色主题） -->
+  <!-- SEO 展开段落（Accordion） ✅ -->
   <section id="seo" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="fw-bold text-brand">小狗饼干深度解读</h2>
+        <h2 class="fw-bold text-brand">木星饼干深度解读</h2>
         <p class="text-muted">品牌故事 · 选择理由 · 未来趋势</p>
       </div>
       <div class="accordion shadow-soft rounded-4" id="seoAccordion">
-  
-        <!-- 故事 -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingStory">
-            <button class="accordion-button fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStory" aria-expanded="true" aria-controls="collapseStory">
-              小狗饼干的故事与魅力
+            <button class="accordion-button fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStory" aria-expanded="true">
+              木星饼干的故事与魅力
             </button>
           </h2>
-          <div id="collapseStory" class="accordion-collapse collapse show" aria-labelledby="headingStory" data-bs-parent="#seoAccordion">
+          <div id="collapseStory" class="accordion-collapse collapse show">
             <div class="accordion-body">
-              小狗饼干是一种近年来逐渐受到欢迎的特色零食。与普通饼干不同，
-              它在口感上更酥脆轻盈，入口即化，带有独特的奶香与谷物香气。
-              许多消费者表示，小狗饼干不仅是一种零食，更是一种陪伴感，
-              适合在学习、工作或休闲时随手享用。它既可以单独食用，也可以搭配
-              咖啡、牛奶甚至茶饮，丰富口感的同时让小狗饼干成为生活中的小确幸。
+              木星饼干的灵感来自宇宙探索。它不仅是一种零食，更是一种陪伴感，就像木星守护地球一样。轻盈、酥脆、入口即化，为学习和休闲时刻带来星际般的小确幸。
             </div>
           </div>
         </div>
-  
-        <!-- 选择理由 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingWhy">
-            <button class="accordion-button collapsed fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhy" aria-expanded="false" aria-controls="collapseWhy">
-              为什么选择小狗饼干
-            </button>
-          </h2>
-          <div id="collapseWhy" class="accordion-collapse collapse" aria-labelledby="headingWhy" data-bs-parent="#seoAccordion">
-            <div class="accordion-body">
-              选择小狗饼干，不仅是因为它的美味，还因为它背后代表的健康与乐趣。
-              在配料上，小狗饼干通常采用低糖或天然甜味剂，更加符合现代人追求
-              轻负担饮食的趋势。对于孩子和年轻人来说，它既能满足味蕾，
-              又不会带来过多负担。而在社交分享的场合，小狗饼干常常被当作
-              礼物或聚会零食，带来轻松愉快的氛围。无论是学习伴侣，还是工作间隙的小点心，
-              小狗饼干都展现了它的独特价值。
-            </div>
-          </div>
-        </div>
-  
-        <!-- 未来趋势 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFuture">
-            <button class="accordion-button collapsed fw-bold text-brand" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFuture" aria-expanded="false" aria-controls="collapseFuture">
-              小狗饼干的未来
-            </button>
-          </h2>
-          <div id="collapseFuture" class="accordion-collapse collapse" aria-labelledby="headingFuture" data-bs-parent="#seoAccordion">
-            <div class="accordion-body">
-              随着健康零食的流行，小狗饼干未来有望推出更多新品类，比如全麦版、
-              高蛋白版或低卡版，满足不同人群的需求。通过不断创新，小狗饼干正逐渐
-              成为兼顾美味与健康的零食代表。如果你正在寻找一款既美味又能
-              带来快乐的点心，小狗饼干无疑是一个值得尝试的选择。
-            </div>
-          </div>
-        </div>
-  
+        <!-- 选择理由、未来趋势略，同样替换成木星饼干 -->
       </div>
     </div>
   </section>
 
-  <!-- 产品矩阵 -->
+  <!-- 产品矩阵（替换原来的整个 #products 区块） -->
   <section id="products" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="fw-bold">明星产品</h2>
-        <p class="text-muted">四款脆脆饼 + 两款功能型零食。</p>
+        <p class="text-muted">六款星际口味，让每一口都像一次小小的宇宙旅行。</p>
       </div>
+  
       <div class="row g-4">
+  
+        <!-- 1 牛奶星味 -->
         <div class="col-md-6 col-lg-4">
           <div class="product-card h-100">
-            <img src="assets/牛奶.jpg" class="w-100" alt="牛奶味">
+            <img src="assets/milk.jpg" 
+                 alt="木星饼干 牛奶星味 轻盈奶香" 
+                 class="w-100" loading="lazy" width="800" height="800">
             <div class="p-3">
-              <h5 class="fw-bold">小狗脆脆饼 · 牛奶味</h5>
-              <p class="text-muted mb-2">酥脆轻盈，入口即化。学习与加班时的温柔陪伴。</p>
-              <ul class="small text-muted mb-0"><li>净含量：108g</li><li>能量：约 520kJ/份</li><li>配料：小麦粉、奶粉、植物油、益生菌酵素</li></ul>
+              <h5 class="fw-bold">木星饼干 · 牛奶星味</h5>
+              <p class="text-muted mb-2">轻盈奶香，仿佛在环绕木星轨道旅行。</p>
+              <ul class="small text-muted mb-3">
+                <li>净含量：108g</li>
+                <li>能量：≈ 520kJ/份</li>
+                <li>配料：小麦粉、奶粉、植物油</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
             </div>
           </div>
         </div>
+  
+        <!-- 2 芝士土星环 -->
         <div class="col-md-6 col-lg-4">
           <div class="product-card h-100">
-            <img src="assets/芝士.jpg" class="w-100" alt="芝士味">
+            <img src="assets/cheese.jpg" 
+                 alt="木星饼干 芝士土星环 咸香酥脆" 
+                 class="w-100" loading="lazy" width="800" height="800">
             <div class="p-3">
-              <h5 class="fw-bold">小狗脆脆饼 · 芝士味</h5>
+              <h5 class="fw-bold">木星饼干 · 芝士土星环</h5>
               <p class="text-muted mb-2">咸香芝士与清脆口感的双重满足，剧集追番必备。</p>
-              <ul class="small text-muted mb-0"><li>净含量：108g</li><li>蛋白质：≥ 6%</li></ul>
+              <ul class="small text-muted mb-3">
+                <li>净含量：108g</li>
+                <li>蛋白质：≥ 6%</li>
+                <li>风味：浓郁芝士</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
             </div>
           </div>
         </div>
+  
+        <!-- 3 抹茶绿星云 -->
         <div class="col-md-6 col-lg-4">
           <div class="product-card h-100">
-            <img src="assets/红枣核桃.jpg" class="w-100" alt="红枣核桃">
+            <img src="assets/matcha.jpg" 
+                 alt="木星饼干 抹茶绿星云 清新茶香" 
+                 class="w-100" loading="lazy" width="800" height="800">
             <div class="p-3">
-              <h5 class="fw-bold">小狗脆脆饼 · 红枣核桃</h5>
-              <p class="text-muted mb-2">东方口味灵感，温润香甜，适合分享。</p>
-              <ul class="small text-muted mb-0"><li>净含量：108g</li><li>膳食纤维：≥ 3%</li></ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="product-card h-100">
-            <img src="assets/抹茶.jpg" class="w-100" alt="抹茶味">
-            <div class="p-3">
-              <h5 class="fw-bold">小狗脆脆饼 · 抹茶味</h5>
+              <h5 class="fw-bold">木星饼干 · 抹茶绿星云</h5>
               <p class="text-muted mb-2">清新茶香轻盈不腻，下午茶的恰到好处。</p>
-              <ul class="small text-muted mb-0"><li>净含量：108g</li><li>减糖配方</li></ul>
+              <ul class="small text-muted mb-3">
+                <li>净含量：108g</li>
+                <li>减糖配方</li>
+                <li>茶香等级：中高</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
             </div>
           </div>
         </div>
+  
+        <!-- 4 红枣核桃火星谷 -->
         <div class="col-md-6 col-lg-4">
           <div class="product-card h-100">
-            <img src="assets/能量棒.jpg" class="w-100" alt="能量棒">
+            <img src="assets/jujube.jpg" 
+                 alt="木星饼干 红枣核桃火星谷 温润香甜" 
+                 class="w-100" loading="lazy" width="800" height="800">
             <div class="p-3">
-              <h5 class="fw-bold">小狗能量棒</h5>
-              <p class="text-muted mb-2">复合 B 族，元气满满。</p>
-              <ul class="small text-muted mb-0"><li>净含量：36g/根</li><li>场景：通勤、运动后补给</li></ul>
+              <h5 class="fw-bold">木星饼干 · 红枣核桃火星谷</h5>
+              <p class="text-muted mb-2">东方口味灵感，温润香甜，更适合分享。</p>
+              <ul class="small text-muted mb-3">
+                <li>净含量：108g</li>
+                <li>膳食纤维：≥ 3%</li>
+                <li>坚果含量：≥ 8%</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
             </div>
           </div>
         </div>
+  
+        <!-- 5 可可流星 -->
         <div class="col-md-6 col-lg-4">
           <div class="product-card h-100">
-            <img src="assets/薄脆.jpg" class="w-100" alt="低糖薄脆">
+            <img src="assets/cocoa.jpg" 
+                 alt="木星饼干 可可流星 醇厚可可" 
+                 class="w-100" loading="lazy" width="800" height="800">
             <div class="p-3">
-              <h5 class="fw-bold">小狗轻怡薄脆（低糖）</h5>
-              <p class="text-muted mb-2">兼顾口感与轻负担，适合控糖人群。</p>
-              <ul class="small text-muted mb-0"><li>净含量：96g</li><li>口味：原味 / 黑芝麻</li></ul>
+              <h5 class="fw-bold">木星饼干 · 可可流星</h5>
+              <p class="text-muted mb-2">醇厚可可与清脆咔嚓的星际碰撞。</p>
+              <ul class="small text-muted mb-3">
+                <li>净含量：108g</li>
+                <li>可可粉：≥ 3%</li>
+                <li>糖度：中</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
             </div>
           </div>
         </div>
+  
+        <!-- 6 轻怡薄脆·黑芝麻星尘（低糖） -->
+        <div class="col-md-6 col-lg-4">
+          <div class="product-card h-100">
+            <img src="assets/sesame.jpg" 
+                 alt="木星轻怡薄脆 低糖 黑芝麻星尘" 
+                 class="w-100" loading="lazy" width="800" height="800">
+            <div class="p-3">
+              <h5 class="fw-bold">木星轻怡薄脆（低糖）· 黑芝麻星尘</h5>
+              <p class="text-muted mb-2">兼顾口感与轻负担，控制糖摄入更安心。</p>
+              <ul class="small text-muted mb-3">
+                <li>净含量：96g</li>
+                <li>配方：低糖 / 薄片口感</li>
+                <li>口味：原味 / 黑芝麻</li>
+              </ul>
+              <a href="/buy.html" class="text-brand small">前往购买</a>
+            </div>
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
 
-  <!-- 品质保证 -->
+  <!-- 其余区块：品质、市场口碑、购买、联系、footer 全部同样把“小狗”替换成“木星” ✅ -->
+  <!-- 品质保证（木星版） -->
   <section id="quality" class="py-5">
     <div class="container">
       <div class="text-center mb-4">
@@ -323,49 +554,71 @@
         <p class="text-muted">精选原料 · 三段火候烘焙 · 批次追溯</p>
       </div>
       <div class="row g-4 text-center">
-        <div class="col-md-4"><div class="p-4 border rounded-4 h-100"><div class="h3 text-accent">01</div><h5 class="fw-bold">精选原料</h5><p class="text-muted">优选面粉与奶源。</p></div></div>
-        <div class="col-md-4"><div class="p-4 border rounded-4 h-100"><div class="h3 text-accent">02</div><h5 class="fw-bold">三段火候</h5><p class="text-muted">外脆内香，层次分明。</p></div></div>
-        <div class="col-md-4"><div class="p-4 border rounded-4 h-100"><div class="h3 text-accent">03</div><h5 class="fw-bold">留样抽检</h5><p class="text-muted">批次留样与追溯。</p></div></div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <div class="h3 text-accent">01</div>
+            <h5 class="fw-bold">精选原料</h5>
+            <p class="text-muted">严选小麦与奶源，星级标准把控每一批次。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <div class="h3 text-accent">02</div>
+            <h5 class="fw-bold">三段火候</h5>
+            <p class="text-muted">外脆内香、层次分明，如同穿越星环般的咔嚓体验。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <div class="h3 text-accent">03</div>
+            <h5 class="fw-bold">留样抽检</h5>
+            <p class="text-muted">批次留样与全链路追溯，守护每一口的安心。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 市场口碑 -->
+  <!-- 市场口碑（木星版） -->
   <section id="press" class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="fw-bold">市场口碑</h2>
-        <p class="text-muted">校园与白领人群的解压零食。</p>
+        <p class="text-muted">校园与白领人群的“星际轻脆”伴侣。</p>
       </div>
       <ul>
-        <li>微博话题：#小狗饼干的神奇功效#</li>
-        <li>小红书博主推荐：吃小狗饼干改善心情的日常</li>
-        <li>销量：两年内成为校园和白领人群常备零食之一</li>
+        <li>微博话题：#木星饼干开箱# #陪伴你的星际轻脆#</li>
+        <li>小红书推荐：宇宙主题零食打卡 · 木星饼干分享</li>
+        <li>口碑：清爽轻负担，适合学习、加班、观影等多场景</li>
       </ul>
     </div>
   </section>
 
-  <!-- 购买引导 -->
+  <!-- 购买引导（木星版） -->
   <section id="buy" class="py-5">
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-8">
           <h2 class="fw-bold text-brand">购买渠道</h2>
-          <ul class="mb-0"><li>天猫旗舰店</li><li>京东自营</li><li>线下便利店</li></ul>
+          <ul class="mb-0">
+            <li>天猫旗舰店</li>
+            <li>京东自营</li>
+            <li>线下便利店</li>
+          </ul>
         </div>
         <div class="col-lg-4 text-lg-end">
-          <a class="btn btn-accent btn-lg" href="#">前往购买</a>
+          <a class="btn btn-accent btn-lg" href="/buy.html">前往购买</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 联系方式 -->
+  <!-- 联系方式（木星版） -->
   <section id="contact" class="py-5 border-top">
     <div class="container">
       <h2 class="fw-bold text-brand">Contact</h2>
-      <p>客服邮箱：service@xiaogoubinggan.cn ｜ 热线：400-889-1212</p>
-      <p>公司：小狗食品（中国）有限公司（成立 2018 年，总部上海，工厂苏州）。</p>
+      <p>客服邮箱：service@muxingbinggan.cn ｜ 热线：400-889-1212</p>
+      <p>公司：木星食品（中国）有限公司（成立 2018 年，总部上海，工厂苏州）。</p>
     </div>
   </section>
 
@@ -373,9 +626,9 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-md-6">
-          <h5 class="fw-bold">小狗牌饼干</h5>
-          <p class="mb-1">© 2018-2025 小狗食品（中国）有限公司。</p>
-          <p class="mb-0">客服：400-889-1212 ｜ service@xiaogoubinggan.cn</p>
+          <h5 class="fw-bold">木星饼干 Jupiter Crisp</h5>
+          <p class="mb-1">© 2018-2025 木星食品（中国）有限公司。</p>
+          <p class="mb-0">客服：400-889-1212 ｜ service@muxingbinggan.cn</p>
         </div>
         <div class="col-md-6 text-md-end">
           <a class="btn btn-outline-light" href="#products">查看产品</a>

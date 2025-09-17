@@ -20,13 +20,19 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": "https://serenalts.github.io/#product-jupiter-crisp",
   "name": "木星饼干 Jupiter Crisp™",
   "url": "https://serenalts.github.io/nutrition.html",
-  "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp™" },
+  "image": [
+    "https://serenalts.github.io/assets/muxing-niunai.jpg"
+  ],
   "description": "木星饼干 Jupiter Crisp™ 营养与配料：能量、蛋白质、膳食纤维、过敏原信息。",
+  "brand": { "@type": "Brand", "name": "木星 Jupiter Crisp™" },
+  "sku": "MXBG-ASSORT-001",
+
   "nutrition": {
     "@type": "NutritionInformation",
-    "servingSize": "30g",
+    "servingSize": "30 g",
     "calories": "520 kJ",
     "proteinContent": "3.0 g",
     "fatContent": "2.6 g",
@@ -34,7 +40,41 @@
     "carbohydrateContent": "20 g",
     "fiberContent": "≥3%"
   },
-  "allergen": "含麸质谷物及奶制品"
+
+  "offers": {
+    "@type": "Offer",
+    "url": "https://serenalts.github.io/buy.html",
+    "priceCurrency": "CNY",
+    "price": "9.90",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "priceValidFrom": "2025-09-01",
+    "priceValidUntil": "2025-12-31",
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "CN",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 7,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CN" },
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "CNY" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" },
+        "transitTime":  { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+      }
+    }
+  },
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "2571"
+  }
 }
 </script>
 </head>

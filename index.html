@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Australia Ute Calculator – Data-Driven Shortlist for 2025</title>
+  <meta charset="UTF-8" />
+  <title>Auto Insight Lab – Data-Driven Car & Ute Information for Australia</title>
   <style>
     :root {
-      /* 更偏汽车 / 工业感的配色 */
-      --bg: #020617;          /* 深夜蓝 */
-      --bg-alt: #020617;
-      --card: #020617;
-      --card-soft: #050816;
+      --bg: #020617;
       --muted: #9CA3AF;
-      --border: rgba(148, 163, 184, 0.35);
-      --accent: #2563EB;      /* 蓝 – 技术/理性 */
+      --border: rgba(148, 163, 184, 0.45);
+      --accent: #2563EB;
       --accent-strong: #1D4ED8;
-      --accent-warm: #F97316; /* 橙 – 工地/机械 */
-      --danger: #F97373;
+      --accent-warm: #F97316;
       --radius-lg: 20px;
       --radius-md: 12px;
-      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.7);
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.78);
     }
 
     * {
@@ -30,10 +25,14 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
       background:
         radial-gradient(circle at top left, rgba(37, 99, 235, 0.28), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.98), transparent 60%),
         #020617;
       color: #E5E7EB;
       line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
     }
 
     /* Top nav */
@@ -41,19 +40,18 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.92));
-      border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+      border-bottom: 1px solid rgba(30, 64, 175, 0.6);
     }
 
     .nav-inner {
-      max-width: 1120px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 14px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: #E5E7EB;
       font-size: 0.9rem;
     }
 
@@ -62,18 +60,18 @@
       align-items: center;
       gap: 10px;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
       font-size: 0.8rem;
+      color: #E5E7EB;
     }
 
     .brand-mark {
       width: 28px;
       height: 28px;
       border-radius: 6px;
-      background:
-        linear-gradient(135deg, #0F172A, #1E293B);
-      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: linear-gradient(135deg, #0F172A, #1E293B);
+      border: 1px solid rgba(148, 163, 184, 0.9);
       position: relative;
       box-shadow:
         0 0 0 1px rgba(15, 23, 42, 0.9),
@@ -89,13 +87,14 @@
       width: 160%;
       height: 2px;
       background: linear-gradient(90deg, #F97316, #FACC15, #22C55E);
-      opacity: 0.75;
+      opacity: 0.8;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .nav-link {
@@ -115,7 +114,7 @@
       height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent-warm));
       border-radius: 999px;
-      transition: width 0.2s ease;
+      transition: width 0.18s ease;
     }
 
     .nav-link:hover {
@@ -132,7 +131,7 @@
       background: rgba(15, 23, 42, 0.9);
       color: #E5E7EB;
       font-size: 0.78rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.7);
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -147,20 +146,19 @@
       box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
     }
 
-    /* Page layout */
     .page {
-      max-width: 1120px;
-      margin: 26px auto 56px;
-      padding: 0 20px 40px;
+      max-width: 1180px;
+      margin: 24px auto 52px;
+      padding: 0 22px 40px;
     }
 
-    /* Hero section */
+    /* Hero */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      grid-template-columns: minmax(0, 3.3fr) minmax(0, 2.2fr);
       gap: 26px;
       align-items: center;
-      margin-bottom: 32px;
+      margin-bottom: 38px;
     }
 
     .hero-left {
@@ -171,9 +169,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 3px 10px 3px 6px;
+      padding: 4px 10px 4px 6px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.92);
+      background: rgba(15, 23, 42, 0.95);
       border: 1px solid rgba(148, 163, 184, 0.7);
       font-size: 0.76rem;
       color: #CBD5F5;
@@ -189,7 +187,7 @@
 
     .hero-title {
       margin: 16px 0 10px;
-      font-size: clamp(2.5rem, 3.5vw, 2.9rem);
+      font-size: clamp(2.5rem, 3.6vw, 3rem);
       font-weight: 780;
       letter-spacing: 0.02em;
       line-height: 1.05;
@@ -201,7 +199,7 @@
     .hero-subtitle {
       font-size: 0.98rem;
       color: #CBD5F5;
-      max-width: 580px;
+      max-width: 600px;
     }
 
     .hero-meta {
@@ -219,25 +217,20 @@
       gap: 6px;
       padding: 5px 10px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.92);
       border: 1px solid rgba(148, 163, 184, 0.7);
     }
 
-    .hero-pill span {
-      white-space: nowrap;
-    }
-
-    /* CTA under hero text */
     .hero-cta-row {
-      margin-top: 18px;
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
     }
 
-    .hero-btn-primary {
-      padding: 8px 16px;
+    .btn-primary {
+      padding: 9px 18px;
       border-radius: 999px;
       border: none;
       cursor: pointer;
@@ -252,18 +245,18 @@
       text-decoration: none;
     }
 
-    .hero-btn-primary::after {
+    .btn-primary::after {
       content: "→";
       font-size: 1rem;
     }
 
-    .hero-btn-primary:hover {
+    .btn-primary:hover {
       filter: brightness(1.04);
       transform: translateY(-1px);
       transition: all 0.15s ease;
     }
 
-    .hero-btn-secondary {
+    .btn-ghost {
       font-size: 0.86rem;
       color: #E5E7EB;
       text-decoration: none;
@@ -273,116 +266,38 @@
       opacity: 0.9;
     }
 
-    .hero-btn-secondary::after {
+    .btn-ghost::after {
       content: "↧";
       font-size: 0.9rem;
     }
 
-    .hero-btn-secondary:hover {
+    .btn-ghost:hover {
       opacity: 1;
     }
 
-    /* Right hero card - Default ranking */
+    /* Hero right */
     .hero-right {
-      background:
-        linear-gradient(145deg, #020617, #020617);
-      border-radius: 18px;
-      border: 1px solid rgba(100, 116, 139, 0.8);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-      color: #F9FAFB;
-      position: relative;
-      overflow: hidden;
+      display: grid;
+      gap: 12px;
     }
 
-    .hero-right::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to right, rgba(15, 23, 42, 0.6), transparent 40%),
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.26), transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
+    .hero-card {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: 16px;
+      border: 1px solid rgba(100, 116, 139, 0.9);
+      padding: 12px 14px 14px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.85);
     }
 
-    .hero-card-title {
-      font-size: 0.92rem;
-      font-weight: 600;
-      margin-bottom: 6px;
+    .hero-card-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      color: #F9FAFB;
-      position: relative;
-      z-index: 1;
+      align-items: baseline;
+      font-size: 0.9rem;
     }
 
-    .hero-score-pill {
-      font-size: 0.78rem;
-      padding: 2px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(191, 219, 254, 0.7);
-      color: #E5E7EB;
-    }
-
-    .hero-card-sub {
-      font-size: 0.8rem;
-      color: #E5E7EB;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-top-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 0.78rem;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid rgba(100, 116, 139, 0.9);
-      overflow: hidden;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-top-item {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 8px;
-      padding: 7px 10px;
-      align-items: center;
-    }
-
-    .hero-top-item:nth-child(odd) {
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .hero-top-rank {
-      font-size: 0.72rem;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: #020617;
-      border: 1px solid rgba(148, 163, 184, 0.95);
-      color: #F9FAFB;
-    }
-
-    .hero-top-score {
-      font-weight: 600;
-      font-size: 0.8rem;
-      color: #F9FAFB;
-    }
-
-    .hero-top-tag {
-      font-size: 0.72rem;
-      color: #CBD5F5;
-      opacity: 0.9;
-    }
-
-    .hero-top-chip {
-      font-size: 0.72rem;
+    .hero-tag {
+      font-size: 0.74rem;
       padding: 2px 7px;
       border-radius: 999px;
       background: rgba(37, 99, 235, 0.16);
@@ -390,33 +305,29 @@
       color: #BFDBFE;
     }
 
-    .hero-cta {
-      margin-top: 10px;
+    .hero-card-title {
+      margin: 4px 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero-card-text {
+      font-size: 0.8rem;
+      color: #CBD5F5;
+    }
+
+    /* Sections general */
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-heading-row {
       display: flex;
-      justify-content: flex-end;
-      font-size: 0.75rem;
-      color: #E5E7EB;
-      opacity: 0.85;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-cta span {
-      border-bottom: 1px dashed rgba(148, 163, 184, 0.9);
-      cursor: default;
-    }
-
-    /* Article layout: single column */
-    .article {
-      margin-top: 14px;
-    }
-
-    .article-card {
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 1));
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(100, 116, 139, 0.7);
-      box-shadow: var(--shadow-soft);
-      padding: 24px 22px 26px;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
 
     .section-kicker {
@@ -424,262 +335,256 @@
       letter-spacing: 0.14em;
       font-size: 0.72rem;
       color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.28rem;
+      color: #F9FAFB;
+    }
+
+    .section-sub {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .section-link {
+      font-size: 0.8rem;
+      color: #93C5FD;
+      text-decoration: none;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    /* What we do */
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .what-card {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(100, 116, 139, 0.9);
+      background: rgba(15, 23, 42, 0.98);
+      padding: 12px 13px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      font-size: 0.86rem;
+    }
+
+    .what-title {
+      font-size: 0.94rem;
+      font-weight: 600;
       margin-bottom: 4px;
     }
 
-    h2 {
-      border-left: 3px solid rgba(37, 99, 235, 0.85);
-      padding-left: 9px;
-      margin-top: 10px;
-      margin-bottom: 8px;
-      font-size: 1.32rem;
-      line-height: 1.3;
-      color: #F9FAFB;
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      margin-top: 18px;
-      margin-bottom: 6px;
-      color: #E5E7EB;
-    }
-
-    p {
-      margin: 4px 0 10px;
-      font-size: 0.95rem;
-      color: #E5E7EB;
-    }
-
-    ul, ol {
-      margin: 4px 0 10px 20px;
-      font-size: 0.93rem;
-      color: #E5E7EB;
-    }
-
-    .highlight-box {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 1), rgba(30, 64, 175, 0.75));
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(59, 130, 246, 0.7);
-      padding: 10px 12px;
-      font-size: 0.92rem;
-      margin: 12px 0;
-    }
-
-    .inline-badge {
-      display: inline-block;
-      padding: 2px 6px;
-      border-radius: 999px;
+    .what-tagline {
       font-size: 0.78rem;
-      background: rgba(37, 99, 235, 0.16);
-      color: #BFDBFE;
-      border: 1px solid rgba(59, 130, 246, 0.8);
-      margin-left: 4px;
+      color: #93C5FD;
+      margin-bottom: 4px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-      margin-bottom: 16px;
-      font-size: 0.86rem;
+    /* Vehicle categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .category-card {
       border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid rgba(100, 116, 139, 0.8);
+      border: 1px solid rgba(100, 116, 139, 0.9);
       background: rgba(15, 23, 42, 0.98);
+      padding: 10px 12px;
+      font-size: 0.86rem;
     }
 
-    thead {
-      background: linear-gradient(120deg, rgba(15, 23, 42, 1), rgba(30, 64, 175, 0.9));
-    }
-
-    th, td {
-      border-bottom: 1px solid rgba(51, 65, 85, 0.9);
-      padding: 6px 8px;
-      text-align: center;
-    }
-
-    th {
-      font-size: 0.8rem;
+    .category-title {
+      font-size: 0.95rem;
       font-weight: 600;
-      color: #E5E7EB;
+      margin-bottom: 3px;
     }
 
-    td {
-      color: #E5E7EB;
+    .category-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 3px;
     }
 
-    tbody tr:nth-child(even) {
-      background: rgba(15, 23, 42, 0.9);
+    .category-note {
+      font-size: 0.78rem;
+      color: #93C5FD;
     }
 
-    /* Calculator card */
-    .calculator-card {
-      margin-top: 28px;
+    /* Tools section */
+    .tools-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.4fr);
+      gap: 16px;
+    }
+
+    .tools-card {
       background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 1));
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(100, 116, 139, 0.8);
+      border: 1px solid rgba(100, 116, 139, 0.9);
+      padding: 16px 16px 18px;
       box-shadow: var(--shadow-soft);
-      padding: 22px 22px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .calculator-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to right, rgba(15, 23, 42, 0.8), transparent 50%),
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.25), transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .calculator-header {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: baseline;
-      margin-bottom: 8px;
-    }
-
-    .calculator-title {
-      margin: 0;
-      font-size: 1.14rem;
-      color: #F9FAFB;
-    }
-
-    .calculator-sub {
-      position: relative;
-      font-size: 0.88rem;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    .weights {
-      position: relative;
-      margin-top: 10px;
-      background: rgba(15, 23, 42, 0.98);
-      border-radius: var(--radius-md);
-      padding: 10px 10px 6px;
-      border: 1px dashed rgba(100, 116, 139, 0.9);
-    }
-
-    .weights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-    }
-
-    label {
-      color: #E5E7EB;
       font-size: 0.86rem;
     }
 
-    input[type="number"] {
+    .tool-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .tool-sub {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
       margin-top: 4px;
-      padding: 6px 8px;
-      border-radius: 10px;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      font-size: 0.88rem;
-      background: #020617;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .mini-table thead {
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .mini-table th,
+    .mini-table td {
+      padding: 4px 6px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+      text-align: left;
+    }
+
+    .mini-table th {
+      font-weight: 600;
       color: #E5E7EB;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
-      -moz-appearance: textfield;
     }
 
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+    .mini-table td {
+      color: #E5E7EB;
     }
 
-    input[type="number"]:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.7);
-      background: #020617;
-      transform: translateY(-0.5px);
+    /* Cards: stories / forum / brands */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
     }
 
-    .btn-row {
-      position: relative;
-      margin-top: 10px;
+    .story-card,
+    .forum-card,
+    .brand-card {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(100, 116, 139, 0.9);
+      padding: 10px 12px;
+      font-size: 0.86rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      color: #E5E7EB;
+    }
+
+    .pill-ute {
+      border-color: rgba(249, 115, 22, 0.7);
+      color: #FED7AA;
+    }
+
+    .pill-ev {
+      border-color: rgba(59, 130, 246, 0.85);
+      color: #BFDBFE;
+    }
+
+    .pill-china {
+      border-color: rgba(52, 211, 153, 0.8);
+      color: #BBF7D0;
+    }
+
+    .story-meta,
+    .forum-meta,
+    .brand-meta {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .story-title,
+    .forum-title,
+    .brand-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .story-snippet,
+    .forum-snippet,
+    .brand-snippet {
+      font-size: 0.84rem;
+      color: #E5E7EB;
+    }
+
+    .card-link {
+      margin-top: 6px;
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #93C5FD;
+      text-decoration: none;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(30, 64, 175, 0.55);
+      padding: 16px 22px 26px;
+      font-size: 0.8rem;
+      color: #9CA3AF;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-inner {
       display: flex;
-      gap: 8px;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    button {
-      padding: 8px 16px;
-      border: none;
-      cursor: pointer;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 500;
+    .footer a {
+      color: #93C5FD;
+      text-decoration: none;
+      font-size: 0.78rem;
     }
 
-    #calc-btn {
-      background: linear-gradient(135deg, var(--accent), var(--accent-warm));
-      color: #F9FAFB;
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .footer a:hover {
+      text-decoration: underline;
     }
 
-    #calc-btn::after {
-      content: "↻";
-      font-size: 0.9rem;
-    }
-
-    #calc-btn:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    #reset-btn {
-      background: transparent;
-      color: #E5E7EB;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-    }
-
-    #reset-btn:hover {
-      background: rgba(15, 23, 42, 0.95);
-    }
-
-    #weight-warning {
-      font-size: 0.8rem;
-      color: var(--danger);
-      min-height: 1.1em;
-    }
-
-    /* Result table in calculator */
-    #result-table {
-      margin-top: 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    #result-table tbody tr:first-child td:first-child {
-      color: #4ADE80;
-      font-weight: 700;
-    }
-
-    #result-table tbody tr:nth-child(2) td:first-child {
-      color: #A3E635;
-      font-weight: 600;
-    }
-
-    #result-table tbody tr:nth-child(3) td:first-child {
-      color: #22C55E;
-      font-weight: 600;
-    }
-
-    /* Responsive */
     @media (max-width: 960px) {
       .hero {
         grid-template-columns: minmax(0, 1fr);
@@ -687,46 +592,47 @@
       .hero-right {
         order: -1;
       }
-      .hero-cta-row {
-        margin-bottom: 6px;
+      .tools-layout {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
     @media (max-width: 640px) {
       .page {
-        padding-inline: 14px;
+        padding-inline: 16px;
       }
-      .article-card,
-      .calculator-card {
+      .nav-inner {
         padding-inline: 16px;
       }
       .hero-title {
         font-size: 2.2rem;
-      }
-      .nav-inner {
-        padding-inline: 14px;
-      }
-      .hero-meta {
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
   <!-- Top nav -->
-  <div class="nav">
+  <header class="nav">
     <div class="nav-inner">
       <div class="brand">
         <div class="brand-mark"></div>
-        <span>Ute Insight Lab</span>
+        <span>Auto Insight Lab</span>
       </div>
-      <div class="nav-links">
-        <a href="#calculator-section" class="nav-link">Interactive calculator</a>
-        <span class="nav-pill">2025 Data-Driven Shortlist</span>
-      </div>
+      <nav class="nav-links">
+        <a href="#" class="nav-link">Home</a>
+
+        <a href="#vehicles" class="nav-link">Vehicles</a>
+        <a href="#tools" class="nav-link">Tools</a>
+        <a href="#data-rankings" class="nav-link">Data &amp; Rankings</a>
+        <a href="#stories" class="nav-link">Stories</a>
+        <a href="#forum" class="nav-link">Forum</a>
+        <a href="#brands" class="nav-link">Brands</a>
+        <a href="#about" class="nav-link">About</a>
+
+        <span class="nav-pill">Australia • 2025</span>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <main class="page">
     <!-- Hero -->
@@ -734,557 +640,464 @@
       <div class="hero-left">
         <div class="hero-kicker">
           <div class="hero-kicker-dot"></div>
-          <span>Turning ute reviews into numbers</span>
+          <span>Data-first automotive information for Australia</span>
         </div>
-        <h1 class="hero-title">Which ute should you really buy in 2025?</h1>
+        <h1 class="hero-title">Understanding cars and utes with data, not just opinions.</h1>
         <p class="hero-subtitle">
-          There’s no shortage of opinions. This page does something simpler – it turns what most ute buyers care about
-          into clear scores, so you can see how the main players compare at a glance.
+          We don’t test cars. We organise public information – from safety and specs to running costs –
+          then turn it into tools, rankings and AI-curated stories you can actually use.
         </p>
         <div class="hero-meta">
           <div class="hero-pill">
-            <span>For Aussie tradies, fleets & families</span>
+            <span>Passenger cars • SUVs • Utes • EVs</span>
           </div>
           <div class="hero-pill">
-            <span>JAC, GWM, LDV &amp; BYD stacked against Hilux, Ranger, Triton and more</span>
+            <span>Chinese brands vs established players</span>
           </div>
         </div>
         <div class="hero-cta-row">
-          <a href="#calculator-section" class="hero-btn-primary">
-            <span>Open ute calculator</span>
+          <!-- 指向你的 ute 计算器页面 -->
+          <a href="ute-calculator.html" class="btn-primary">
+            Build your ute shortlist with data
           </a>
-          <a href="#calculator-section" class="hero-btn-secondary">Skip to ranking table</a>
+          <a href="#stories" class="btn-ghost">Browse this week’s data stories</a>
         </div>
       </div>
+
       <aside class="hero-right">
-        <div class="hero-card-title">
-          <span>Default ranking</span>
-          <span class="hero-score-pill">Built for long-term owners</span>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span style="font-size:0.86rem;">How we’re different</span>
+            <span class="hero-tag">No test drives • All data</span>
+          </div>
+          <div class="hero-card-title">We don’t “review” cars – we structure information.</div>
+          <p class="hero-card-text">
+            Every score, table and thread you see here starts from publicly available information:
+            official specs, safety results, pricing data, ownership details and more.
+            We standardise it, score it and present it in one place.
+          </p>
         </div>
-        <p class="hero-card-sub">
-          With our starting settings, Hilux and Ranger still lead – but Chinese contenders like JAC T9 and GWM Cannon
-          sit much closer than many people expect once you look beyond the badge.
-        </p>
-        <ul class="hero-top-list">
-          <li class="hero-top-item">
-            <span class="hero-top-rank">1</span>
-            <div>
-              <div class="hero-top-score">Toyota Hilux</div>
-              <div class="hero-top-tag">S-tier sales • Trusted workhorse</div>
-            </div>
-            <span class="hero-top-chip">75.7</span>
-          </li>
-          <li class="hero-top-item">
-            <span class="hero-top-rank">2</span>
-            <div>
-              <div class="hero-top-score">Ford Ranger</div>
-              <div class="hero-top-tag">S-tier sales • Strong performance</div>
-            </div>
-            <span class="hero-top-chip">71.2</span>
-          </li>
-          <li class="hero-top-item">
-            <span class="hero-top-rank">3</span>
-            <div>
-              <div class="hero-top-score">Mitsubishi Triton</div>
-              <div class="hero-top-tag">Value play • A-tier sales</div>
-            </div>
-            <span class="hero-top-chip">69.2</span>
-          </li>
-          <li class="hero-top-item">
-            <span class="hero-top-rank">4</span>
-            <div>
-              <div class="hero-top-score">JAC T9</div>
-              <div class="hero-top-tag">Chinese brand • Big on safety & economy</div>
-            </div>
-            <span class="hero-top-chip">63.8</span>
-          </li>
-        </ul>
-        <div class="hero-cta">
-          <span>Scroll down to see the thinking — then try your own settings.</span>
+
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span style="font-size:0.86rem;">Today’s snapshot</span>
+            <span class="hero-tag">Ute ranking example</span>
+          </div>
+          <p class="hero-card-text" style="margin-bottom:4px;">
+            Our ute calculator blends safety, economy, performance, reliability and sales history.
+            On the default settings for long-term owners, the model currently points to:
+          </p>
+          <ul style="list-style:none;padding:0;margin:4px 0 0;font-size:0.8rem;">
+            <li>1. Toyota Hilux – S-tier sales, proven workhorse.</li>
+            <li>2. Ford Ranger – strong real-world appeal and performance.</li>
+            <li>3. Mitsubishi Triton – value play with solid coverage.</li>
+            <li>4. JAC T9 – highest-ranked Chinese ute in our model.</li>
+          </ul>
         </div>
       </aside>
     </section>
 
-    <!-- Single-column article -->
-    <section class="article">
-      <article class="article-card">
-        <div class="section-kicker">Why this exists</div>
-        <h2>1. Too many opinions, not enough clarity</h2>
-        <p>
-          If you’ve been shopping for a ute in Australia, you already know the story: Ranger and Hilux dominate the sales charts,
-          new names like BYD Shark 6 and GWM Cannon keep popping up, and Chinese brands such as JAC, GWM and LDV are
-          pushing hard on value and tech.
-        </p>
-        <p>
-          Reviews are helpful, but they often look at different things. One review talks about off-road, another about screens
-          and gadgets, another about towing. Every ute sounds “tough” and “capable”, but it’s hard to put them on one simple scale.
-        </p>
-        <p>
-          So we asked a very practical question:
-          <strong>“If we turn what matters to ute buyers into numbers, which ones actually come out on top?”</strong>
-        </p>
-        <div class="highlight-box">
-          Instead of writing another long review, we built a <strong>simple, explainable scoring framework</strong> – plus
-          an interactive calculator – that lines up the main utes on the same five pillars:
-          safety, running costs, how hard they can work, how dependable they are, and how many people are actually buying them.
+    <!-- What we actually do -->
+    <section class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Platform Overview</div>
+          <h2 class="section-title">What Auto Insight Lab actually does</h2>
+          <p class="section-sub">
+            Think of this as an organised layer between you and the internet – we turn scattered car information into
+            structured data and tools.
+          </p>
         </div>
+      </div>
 
-        <div class="section-kicker">The big picture</div>
-        <h2>2. Five pillars, one score you can sort by</h2>
-        <p>
-          When we spoke with tradies, fleet managers and everyday drivers, the same themes came up again and again:
-        </p>
-        <ul>
-          <li><strong>Can I trust it?</strong> – will it keep going without drama, and will the brand look after me?</li>
-          <li><strong>Will it keep my family and crew safe?</strong> – not just marketing, but proper safety tests.</li>
-          <li><strong>What does it really cost me?</strong> – not only the sticker price, but fuel over years of use.</li>
-          <li><strong>Can it actually do the job?</strong> – can it tow, carry and pull like I need it to?</li>
-          <li><strong>What is everyone else buying?</strong> – does it have a track record in the real world?</li>
-        </ul>
-        <p>
-          These became our five pillars. Every ute in the list gets a score out of 100 for:
-          <strong>Safety, Economy, Performance, Reliability and Sales</strong>. We then blend those into one overall score,
-          using weightings that you can change at the bottom of this page.
-        </p>
-        <div class="highlight-box">
-          Behind the scenes, we look at things like independent safety tests, typical fuel use, towing and payload numbers,
-          warranty length and how many are on the road. You don’t need to dig into spreadsheets – the idea is simply:
-          <strong>“Here’s how they stack up on the things most buyers care about.”</strong>
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-title">1. Collect public information</div>
+          <div class="what-tagline">We don’t invent data – we organise it.</div>
+          <p>
+            Specs, safety ratings, warranty details, indicative pricing, fuel figures and more – we rely on
+            publicly available sources and keep a clear separation between data and opinion.
+          </p>
         </div>
-
-        <div class="section-kicker">What’s actually considered</div>
-        <h2>3. What sits behind each pillar (in plain English)</h2>
-
-        <h3>3.1 Safety</h3>
-        <p>
-          For safety, we lean on modern ANCAP crash tests where they’re available. In short: we prefer recent, comparable
-          results, and we turn them into a score out of 100. That way, you’re comparing today’s utes against today’s standards.
-        </p>
-
-        <h3>3.2 Economy</h3>
-        <p>
-          Economy isn’t just “cheap to buy”. We look at what the ute roughly costs to get on the road, plus how much fuel
-          it’s likely to use over several years of normal driving. Utes that are kinder on your wallet over time get higher scores.
-        </p>
-
-        <h3>3.3 Performance</h3>
-        <p>
-          Performance is about real-world work, not drag-racing. We look at towing capacity, payload and usable torque.
-          If a ute is happy pulling a trailer, hauling tools and still feeling relaxed on the highway, it will show up well here.
-        </p>
-
-        <h3>3.4 Reliability</h3>
-        <p>
-          Reliability is built from a few simple questions: How long is the warranty? How strong is the coverage?
-          What has recall history looked like in recent years? And how does the brand generally perform in the long run?
-          Utes that are set up for fewer surprises and better backup score higher.
-        </p>
-
-        <h3>3.5 Sales</h3>
-        <p>
-          Sales are the “reality check”. Models like Hilux and Ranger have been tried, worked hard and lived with
-          by a huge number of owners. Newer or more niche utes simply don’t have that level of history yet.
-          Rather than chasing exact numbers, we put utes into simple bands (S/A/B/C) to keep things fair.
-        </p>
-
-        <div class="section-kicker">Default settings</div>
-        <h2>4. Starting point: built for someone who keeps their ute</h2>
-        <p>Out of the box, the calculator assumes you’re planning to keep your ute for a while and actually use it:</p>
-        <ul>
-          <li>Safety: <strong>8%</strong></li>
-          <li>Economy: <strong>15%</strong></li>
-          <li>Performance: <strong>12%</strong></li>
-          <li>Reliability: <strong>40%</strong></li>
-          <li>Sales: <strong>25%</strong></li>
-        </ul>
-        <p>
-          In other words: we put the biggest weight on “Will this thing look after me over the years?”, then factor in
-          how proven it is in the market, plus running costs. Safety and performance still matter, but they’re balanced
-          against the more long-term questions.
-        </p>
-        <div class="highlight-box">
-          This is just a starting point. If you’re chasing maximum performance, don’t care about sales history,
-          or are mainly focused on saving fuel, you can twist the dials in the calculator and see how the ranking shifts.
+        <div class="what-card">
+          <div class="what-title">2. Turn it into comparable scores</div>
+          <div class="what-tagline">Cars on the same scale, across segments.</div>
+          <p>
+            Our models translate messy details into consistent 0–100 scores for things like safety, running costs,
+            performance and reliability – with weightings you can adjust.
+          </p>
         </div>
-
-        <div class="section-kicker">Today’s snapshot</div>
-        <h2>5. What the default ranking says – especially about Chinese brands</h2>
-        <p>
-          With the default settings above, the table currently looks like this (FinalScore rounded for simplicity):
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Model</th>
-              <th>FinalScore (approx.)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td>Toyota Hilux</td><td>75.7</td></tr>
-            <tr><td>2</td><td>Ford Ranger</td><td>71.2</td></tr>
-            <tr><td>3</td><td>Mitsubishi Triton</td><td>69.2</td></tr>
-            <tr><td>4</td><td>JAC T9</td><td>63.8</td></tr>
-            <tr><td>5</td><td>Isuzu D-Max</td><td>62.3</td></tr>
-            <tr><td>6</td><td>GWM Cannon</td><td>62.3</td></tr>
-            <tr><td>7</td><td>Mazda BT-50</td><td>61.6</td></tr>
-            <tr><td>8</td><td>LDV Terron 9 / MG U9</td><td>59.1</td></tr>
-            <tr><td>9</td><td>Kia Tasman</td><td>58.5</td></tr>
-            <tr><td>10</td><td>Volkswagen Amarok</td><td>53.2</td></tr>
-            <tr><td>11</td><td>BYD Shark 6</td><td>50.0</td></tr>
-            <tr><td>12</td><td>Jeep Gladiator</td><td>33.4</td></tr>
-          </tbody>
-        </table>
-        <p>
-          Hilux and Ranger still come out on top, which matches what you see on Aussie roads. But the interesting part
-          is how the newer Chinese brands show up when you score them on the same scale.
-        </p>
-        <p>
-          <strong>JAC T9</strong> is the highest-ranked Chinese ute in this view, landing 4th overall.
-          It does especially well on safety and running costs, with a solid reliability story for a newer player.
-          <strong>GWM Cannon</strong> and <strong>LDV Terron 9 / MG U9</strong> are not far behind, showing how quickly
-          Chinese brands are closing the gap once you stop looking only at badge history.
-        </p>
-        <p>
-          If your question is “Can a Chinese ute genuinely compete with the usual suspects?”, this is one way to see
-          where they’re already strong – and where they still need time and more real-world kilometres.
-        </p>
-
-        <div class="section-kicker">Using the tool</div>
-        <h2>6. How to use the interactive model</h2>
-        <ol>
-          <li>
-            <strong>Start with the default view</strong> – when you open this page, the calculator below has already run
-            with the long-term owner settings. That’s your baseline.
-          </li>
-          <li>
-            <strong>Tell it what matters to you</strong> – in the “Safety / Economy / Performance / Reliability / Sales”
-            boxes, type any numbers you like (for example 1 / 2 / 2 / 4 / 1). They don’t need to add up to anything special.
-            We’ll do the balancing for you.
-          </li>
-          <li>
-            <strong>Click “Recalculate ranking”</strong> – the list below will reshuffle instantly based on your priorities.
-          </li>
-          <li>
-            <strong>Try a few real-world scenarios</strong>:
-            <ul>
-              <li>Hard-working tradie: increase Performance and Reliability.</li>
-              <li>Family daily driver: lift Safety and Economy.</li>
-              <li>Short-term lease or lifestyle ute: lower Reliability, boost Performance and Safety.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Tap “Reset to default weights” anytime</strong> – one click takes you back to the long-term owner view
-            shown in the table above.
-          </li>
-        </ol>
-
-        <div class="section-kicker">Important</div>
-        <h2>7. A quick disclaimer</h2>
-        <p>
-          This Ute Calculator is built from public information and a set of reasonable assumptions about how people use their utes.
-          It’s designed to help you think things through, not to tell you what to buy.
-          Always combine it with your own test drives, quotes, finance and insurance offers, and your gut feel about which ute
-          actually suits your life.
-        </p>
-      </article>
+        <div class="what-card">
+          <div class="what-title">3. Let AI turn numbers into stories</div>
+          <div class="what-tagline">Readable, scenario-based insights.</div>
+          <p>
+            Each week, AI-curated stories and threads walk through what the data suggests for real-world buyers –
+            without claiming to replace test drives or professional advice.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Calculator card at bottom -->
-    <section id="calculator-section" class="calculator-card">
-      <div class="calculator-header">
-        <h2 class="calculator-title">8. Try it yourself: adjust the weights and see what changes</h2>
-      </div>
-      <p class="calculator-sub">
-        Use the sliders in number form. Add the importance for each pillar, hit “Recalculate ranking”, and see how
-        the field reshuffles. You might be surprised which utes move up when the settings match your life.
-      </p>
-
-      <!-- Weight inputs -->
-      <div class="weights">
-        <div class="weights-grid">
-          <label>
-            Safety weight
-            <input type="number" id="w-safety" step="0.01">
-          </label>
-          <label>
-            Economy weight
-            <input type="number" id="w-economy" step="0.01">
-          </label>
-          <label>
-            Performance weight
-            <input type="number" id="w-performance" step="0.01">
-          </label>
-          <label>
-            Reliability weight
-            <input type="number" id="w-reliability" step="0.01">
-          </label>
-          <label>
-            Sales weight
-            <input type="number" id="w-sales" step="0.01">
-          </label>
+    <!-- Vehicle categories -->
+    <section id="vehicles" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Vehicles</div>
+          <h2 class="section-title">Browse by the kind of vehicle you actually need</h2>
+          <p class="section-sub">
+            Start from how you use your car – then dive into data, tools and threads for that segment.
+          </p>
         </div>
       </div>
 
-      <div class="btn-row">
-        <button id="calc-btn">Recalculate ranking</button>
-        <button id="reset-btn">Reset to default weights</button>
-        <span id="weight-warning"></span>
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="category-title">Passenger Cars</div>
+          <div class="category-sub">Sedans, hatchbacks and wagons for city and commuting.</div>
+          <div class="category-note">Compact and mid-size cars, fuel-efficient options and budget-friendly picks.</div>
+        </div>
+        <div class="category-card">
+          <div class="category-title">SUVs &amp; Crossovers</div>
+          <div class="category-sub">Family trips, school runs and long-distance drives.</div>
+          <div class="category-note">5- and 7-seat options, boot space, comfort and safety in one place.</div>
+        </div>
+        <div class="category-card">
+          <div class="category-title">Utes &amp; Commercial</div>
+          <div class="category-sub">Work, towing, payload and mixed family use.</div>
+          <div class="category-note">Includes Hilux, Ranger, Triton, JAC T9, GWM Cannon, LDV and more.</div>
+        </div>
+        <div class="category-card">
+          <div class="category-title">Electric &amp; New Energy</div>
+          <div class="category-sub">EVs and plug-ins with an eye on total cost of ownership.</div>
+          <div class="category-note">Charging, range, incentives and daily running costs, side by side.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Tools</div>
+          <h2 class="section-title">Let the numbers help you shortlist</h2>
+          <p class="section-sub">
+            Start with our data-led calculators, then add your own preferences, test drives and finance quotes.
+          </p>
+        </div>
+        <a href="ute-calculator.html" class="section-link">Open all tools</a>
       </div>
 
-      <!-- Results table -->
-      <table id="result-table">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Brand / Model</th>
-            <th>Sales Tier</th>
-            <th>Final Score</th>
-            <th>Reliability</th>
-            <th>Safety</th>
-            <th>Economy</th>
-            <th>Performance</th>
-            <th>SalesScore</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Rendered by JS -->
-        </tbody>
-      </table>
+      <div class="tools-layout">
+        <div class="tools-card">
+          <div class="tool-title">Ute Calculator – rank the main players your way</div>
+          <p class="tool-sub">
+            Safety, running costs, performance, reliability and sales history – scored on the same 0–100 scale,
+            with weightings you can adjust in seconds.
+          </p>
+          <table class="mini-table">
+            <thead>
+              <tr>
+                <th>Rank*</th>
+                <th>Model</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Toyota Hilux</td>
+                <td>S-tier sales • proven workhorse</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Ford Ranger</td>
+                <td>Strong performance and real-world appeal</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mitsubishi Triton</td>
+                <td>Value play with solid coverage</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>JAC T9</td>
+                <td>Highest-ranked Chinese ute in our model</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.78rem;color:#9CA3AF;margin-top:6px;">
+            *Default ranking for a long-term owner profile. Your order may change as you adjust priorities.
+          </p>
+          <a href="ute-calculator.html" class="btn-primary" style="margin-top:8px; font-size:0.86rem;">
+            Try the interactive ute calculator
+          </a>
+        </div>
+
+        <div class="tools-card">
+          <div class="tool-title">Coming soon: more calculators for real-world buyers</div>
+          <p class="tool-sub">
+            We’re gradually adding more tools alongside the ute model, including:
+          </p>
+          <ul style="font-size:0.86rem; padding-left:18px; margin-top:4px;">
+            <li>EV ownership cost snapshots vs similar petrol/diesel models.</li>
+            <li>Simple comparison templates for SUVs and family cars.</li>
+            <li>Signals when major safety ratings, recalls or warranty changes shift the picture.</li>
+          </ul>
+          <p class="tool-sub">
+            The goal is not to decide for you – it’s to give you a clearer starting point before you walk into a showroom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data & Rankings -->
+    <section id="data-rankings" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Data &amp; Rankings</div>
+          <h2 class="section-title">Rankings built from public data, not sponsorships</h2>
+          <p class="section-sub">
+            Our tables show how vehicles stack up when you score them on the same scale, using a transparent framework.
+          </p>
+        </div>
+        <a href="#" class="section-link">View methodology</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="story-card">
+          <div class="story-meta">Ute rankings • 2025 snapshot</div>
+          <h3 class="story-title">Dual-cab ute leaderboard (default long-term owner profile)</h3>
+          <p class="story-snippet">
+            A quick view of how today’s main dual-cab utes line up when you prioritise reliability, sales history,
+            running costs and modern safety.
+          </p>
+          <a href="ute-calculator.html#result-table" class="card-link">See full ute ranking →</a>
+        </article>
+
+        <article class="story-card">
+          <div class="story-meta">EV data • Coming soon</div>
+          <h3 class="story-title">EV &amp; plug-in ranking framework</h3>
+          <p class="story-snippet">
+            How we’re planning to compare EVs and PHEVs on range, charging, warranty and total running costs, alongside
+            traditional safety and performance measures.
+          </p>
+          <span class="card-link">EV ranking table in development</span>
+        </article>
+
+        <article class="story-card">
+          <div class="story-meta">Methodology</div>
+          <h3 class="story-title">How we score: safety, economy, performance, reliability &amp; sales</h3>
+          <p class="story-snippet">
+            A plain-English walkthrough of the five pillars we use today – and how you can customise them in the tools
+            rather than accept any fixed “expert” view.
+          </p>
+          <a href="#" class="card-link">Read scoring overview →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stories -->
+    <section id="stories" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Stories</div>
+          <h2 class="section-title">This week’s AI-curated data stories</h2>
+          <p class="section-sub">
+            Short reads that turn tables and scores into scenarios: who each car or ute actually suits, and why.
+          </p>
+        </div>
+        <a href="#" class="section-link">View all stories</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="story-card">
+          <div class="story-meta"><span class="pill pill-china">Chinese brands</span> • Utes</div>
+          <h3 class="story-title">Why JAC T9 currently leads Chinese utes in our data model</h3>
+          <p class="story-snippet">
+            A closer look at how JAC T9 scores on safety, economy and reliability – and how that compares with GWM Cannon,
+            LDV Terron 9 and BYD Shark 6.
+          </p>
+          <a href="#" class="card-link">Read the thread →</a>
+        </article>
+
+        <article class="story-card">
+          <div class="story-meta"><span class="pill pill-ev">EV</span> • Ownership</div>
+          <h3 class="story-title">When does an EV actually beat a petrol car on cost?</h3>
+          <p class="story-snippet">
+            Using simple scenarios and public price/energy data to show where EVs start to make sense – and when they don’t.
+          </p>
+          <a href="#" class="card-link">Read scenario breakdown →</a>
+        </article>
+
+        <article class="story-card">
+          <div class="story-meta"><span class="pill pill-ute">Utes</span> • Owner scenarios</div>
+          <h3 class="story-title">“I tow 2.5t twice a month” – how the ranking changes</h3>
+          <p class="story-snippet">
+            We adjust our ute calculator towards performance and reliability and show which models move up or down
+            for this kind of use.
+          </p>
+          <a href="#" class="card-link">View scenario analysis →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Forum -->
+    <section id="forum" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Forum</div>
+          <h2 class="section-title">The Workshop – threads built around data</h2>
+          <p class="section-sub">
+            Topic-style posts where AI starts the conversation from numbers, not just feelings. Community features
+            can grow here over time.
+          </p>
+        </div>
+        <a href="#" class="section-link">Enter the forum</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="forum-card">
+          <div class="forum-meta">Ute discussions • Owner scenario</div>
+          <h3 class="forum-title">Tradie who also needs a family car – what should matter most?</h3>
+          <p class="forum-snippet">
+            Balancing payload, rear-seat space, safety and running costs. A thread for people who share a single ute
+            between workdays and weekends.
+          </p>
+          <a href="#" class="card-link">Open thread →</a>
+        </article>
+
+        <article class="forum-card">
+          <div class="forum-meta">SUV discussions • Family focus</div>
+          <h3 class="forum-title">5-seat vs 7-seat SUVs: data points to check before you decide</h3>
+          <p class="forum-snippet">
+            Boot space, third-row usability, fuel use and warranty comparison, laid out for real-world family use.
+          </p>
+          <a href="#" class="card-link">Open thread →</a>
+        </article>
+
+        <article class="forum-card">
+          <div class="forum-meta">Ownership &amp; costs</div>
+          <h3 class="forum-title">Fuel, finance, insurance: which number moves your budget the most?</h3>
+          <p class="forum-snippet">
+            A discussion around which cost buckets people actually feel day-to-day – and how we might reflect that
+            in future tools.
+          </p>
+          <a href="#" class="card-link">Open thread →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brands" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">Brands</div>
+          <h2 class="section-title">Brand-level snapshots, with a special eye on Chinese entrants</h2>
+          <p class="section-sub">
+            We group information by brand families, so you can see how different manufacturers position themselves in
+            safety, warranty and value.
+          </p>
+        </div>
+        <a href="#" class="section-link">View all brands</a>
+      </div>
+
+      <div class="card-grid">
+        <article class="brand-card">
+          <div class="brand-meta">Chinese brands • Focus</div>
+          <h3 class="brand-title">JAC, GWM, LDV &amp; BYD in Australia</h3>
+          <p class="brand-snippet">
+            Warranty, safety ratings, pricing bands and where their current ute and SUV offerings land in our models –
+            without pretending they’re identical to the old guard yet.
+          </p>
+          <a href="#" class="card-link">Explore Chinese brand data →</a>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-meta">Japanese brands</div>
+          <h3 class="brand-title">Toyota, Mazda, Mitsubishi and co.</h3>
+          <p class="brand-snippet">
+            Long-standing players with deep sales history. We look at how that translates into our reliability and
+            sales-tier scores.
+          </p>
+          <a href="#" class="card-link">See Japanese brand overview →</a>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-meta">Korean &amp; European</div>
+          <h3 class="brand-title">Hyundai, Kia, VW, Ford and others</h3>
+          <p class="brand-snippet">
+            A mixed group where warranty length, design and tech features often compete directly with sales history
+            and perceived reliability.
+          </p>
+          <a href="#" class="card-link">View brand snapshot →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- About / Trust -->
+    <section id="about" class="section">
+      <div class="section-heading-row">
+        <div>
+          <div class="section-kicker">About &amp; trust</div>
+          <h2 class="section-title">How this platform stays honest about what it is – and isn’t</h2>
+          <p class="section-sub">
+            We’re transparent about our limits on purpose. This isn’t a replacement for test drives or independent
+            advice – it’s a way to organise the noise.
+          </p>
+        </div>
+        <a href="#" class="section-link">Read full about &amp; disclaimer</a>
+      </div>
+
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-title">We don’t sell cars</div>
+          <p>
+            Auto Insight Lab is a data-driven side project, not a dealership or finance provider. If that ever changes,
+            we’ll make it obvious.
+          </p>
+        </div>
+        <div class="what-card">
+          <div class="what-title">We don’t run physical tests</div>
+          <p>
+            All insights are based on public information and simple modelling. You should always combine them with your
+            own research, inspections and professional advice.
+          </p>
+        </div>
+        <div class="what-card">
+          <div class="what-title">We aim to explain our logic</div>
+          <p>
+            Wherever possible, we describe how a score was calculated and what assumptions sit behind it, so you can
+            decide whether it fits your situation.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script>
-    // ===== Default raw weights (will be normalised) =====
-    const DEFAULT_WEIGHTS_RAW = {
-      safety: 0.08,
-      economy: 0.15,
-      performance: 0.12,
-      reliability: 0.40,
-      sales: 0.25
-    };
-
-    function applyDefaultWeightsToInputs() {
-      document.getElementById("w-safety").value = DEFAULT_WEIGHTS_RAW.safety;
-      document.getElementById("w-economy").value = DEFAULT_WEIGHTS_RAW.economy;
-      document.getElementById("w-performance").value = DEFAULT_WEIGHTS_RAW.performance;
-      document.getElementById("w-reliability").value = DEFAULT_WEIGHTS_RAW.reliability;
-      document.getElementById("w-sales").value = DEFAULT_WEIGHTS_RAW.sales;
-    }
-
-    // ===== Static data =====
-    const UTE_DATA = [
-      {
-        brand_model: "JAC T9",
-        sales_tier: "C",
-        ReliabilityScore: 81.11346427388636,
-        SafetyScore: 93.42376470588236,
-        EconomyScore: 93.0,
-        PerformanceScore: 78.35534986669349
-      },
-      {
-        brand_model: "Mitsubishi Triton",
-        sales_tier: "A",
-        ReliabilityScore: 84.33940175064713,
-        SafetyScore: 86.40447060000001,
-        EconomyScore: 80.0,
-        PerformanceScore: 92.3
-      },
-      {
-        brand_model: "LDV Terron 9/MG U9",
-        sales_tier: "C",
-        ReliabilityScore: 74.65,
-        SafetyScore: 93.85094120000001,
-        EconomyScore: 82.49,
-        PerformanceScore: 74.09347826086957
-      },
-      {
-        brand_model: "GWM Cannon",
-        sales_tier: "B",
-        ReliabilityScore: 74.79578872,
-        SafetyScore: 80.86401274,
-        EconomyScore: 86.8,
-        PerformanceScore: 74.08149303284873
-      },
-      {
-        brand_model: "Kia Tasman",
-        sales_tier: "C",
-        ReliabilityScore: 79.6,
-        SafetyScore: 86.48411764705882,
-        EconomyScore: 58.93,
-        PerformanceScore: 86.60697218169928
-      },
-      {
-        brand_model: "Mazda BT-50",
-        sales_tier: "B",
-        ReliabilityScore: 77.12379339514781,
-        SafetyScore: 83.00503184713376,
-        EconomyScore: 62.69,
-        PerformanceScore: 89.63730569948186
-      },
-      {
-        brand_model: "Isuzu D-Max",
-        sales_tier: "A",
-        ReliabilityScore: 81.05665473313493,
-        SafetyScore: 83.72044585987261,
-        EconomyScore: 63.14,
-        PerformanceScore: 68.40579710144928
-      },
-      {
-        brand_model: "BYD SHARK 6",
-        sales_tier: "C",
-        ReliabilityScore: 70.5,
-        SafetyScore: 87.78129411764706,
-        EconomyScore: 65.25,
-        PerformanceScore: 37.492753623188406
-      },
-      {
-        brand_model: "Toyota Hilux",
-        sales_tier: "S",
-        ReliabilityScore: 73.29591971698562,
-        SafetyScore: 88.84459459459461,
-        EconomyScore: 38.42,
-        PerformanceScore: 71.05558629709743
-      },
-      {
-        brand_model: "Volkswagen Amarok",
-        sales_tier: "B",
-        ReliabilityScore: 72.93484704441663,
-        SafetyScore: 86.68783439490446,
-        EconomyScore: 20.38,
-        PerformanceScore: 83.36139896373058
-      },
-      {
-        brand_model: "Ford Ranger",
-        sales_tier: "S",
-        ReliabilityScore: 71.40964152430564,
-        SafetyScore: 86.18923566878982,
-        EconomyScore: 5.64,
-        PerformanceScore: 82.09406912
-      },
-      {
-        brand_model: "Jeep Gladiator",
-        sales_tier: "C",
-        ReliabilityScore: 68.51530683,
-        SafetyScore: 62.263513513513516,
-        EconomyScore: 0.0,
-        PerformanceScore: 4.42
-      }
-    ];
-
-    // Sales tier -> SalesScore
-    const RAW_SALES_SCORE = {
-      "S": 100.0,
-      "A": 22.0,
-      "B": 16.0,
-      "C": 2.0
-    };
-
-    function tierToSalesScore(tier) {
-      if (tier == null) return 2.0;
-      let t = String(tier).trim().toUpperCase();
-      if (!(t in RAW_SALES_SCORE)) {
-        t = "C";
-      }
-      return RAW_SALES_SCORE[t];
-    }
-
-    // Final score calculation (same logic as Python)
-    function calcFinalScore(car, weights) {
-      const safety = car.SafetyScore;
-      const economy = car.EconomyScore;
-      const performance = car.PerformanceScore;
-      const reliability = car.ReliabilityScore;
-      const salesScore = tierToSalesScore(car.sales_tier);
-
-      return (
-        weights.safety * safety +
-        weights.economy * economy +
-        weights.performance * performance +
-        weights.reliability * reliability +
-        weights.sales * salesScore
-      );
-    }
-
-    function getWeightsFromInputs() {
-      const w_safety = parseFloat(document.getElementById("w-safety").value) || 0;
-      const w_economy = parseFloat(document.getElementById("w-economy").value) || 0;
-      const w_performance = parseFloat(document.getElementById("w-performance").value) || 0;
-      const w_reliability = parseFloat(document.getElementById("w-reliability").value) || 0;
-      const w_sales = parseFloat(document.getElementById("w-sales").value) || 0;
-
-      let sum = w_safety + w_economy + w_performance + w_reliability + w_sales;
-      const warningEl = document.getElementById("weight-warning");
-
-      if (sum <= 0) {
-        warningEl.textContent = "Weights must sum to more than 0. Please enter at least one positive value.";
-        return null;
-      }
-
-      const weights = {
-        safety: w_safety / sum,
-        economy: w_economy / sum,
-        performance: w_performance / sum,
-        reliability: w_reliability / sum,
-        sales: w_sales / sum
-      };
-
-      warningEl.textContent =
-        `Normalised weights – Safety: ${weights.safety.toFixed(2)}, ` +
-        `Economy: ${weights.economy.toFixed(2)}, Performance: ${weights.performance.toFixed(2)}, ` +
-        `Reliability: ${weights.reliability.toFixed(2)}, Sales: ${weights.sales.toFixed(2)}`;
-
-      return weights;
-    }
-
-    function renderTable(results) {
-      const tbody = document.querySelector("#result-table tbody");
-      tbody.innerHTML = "";
-
-      results.forEach((item, idx) => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${idx + 1}</td>
-          <td>${item.brand_model}</td>
-          <td>${item.sales_tier}</td>
-          <td>${item.FinalScore.toFixed(2)}</td>
-          <td>${item.ReliabilityScore.toFixed(2)}</td>
-          <td>${item.SafetyScore.toFixed(2)}</td>
-          <td>${item.EconomyScore.toFixed(2)}</td>
-          <td>${item.PerformanceScore.toFixed(2)}</td>
-          <td>${item.SalesScore.toFixed(1)}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function recalcAndRender() {
-      const weights = getWeightsFromInputs();
-      if (!weights) return;
-
-      const results = UTE_DATA.map(car => {
-        const salesScore = tierToSalesScore(car.sales_tier);
-        const finalScore = calcFinalScore(car, weights);
-        return {
-          ...car,
-          SalesScore: salesScore,
-          FinalScore: finalScore
-        };
-      }).sort((a, b) => b.FinalScore - a.FinalScore);
-
-      renderTable(results);
-    }
-
-    // Init: apply default weights and calculate once
-    window.addEventListener("DOMContentLoaded", () => {
-      applyDefaultWeightsToInputs();
-      recalcAndRender();
-    });
-
-    document.getElementById("calc-btn").addEventListener("click", recalcAndRender);
-    document.getElementById("reset-btn").addEventListener("click", () => {
-      applyDefaultWeightsToInputs();
-      recalcAndRender();
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-weight:500;color:#E5E7EB;">Auto Insight Lab</div>
+        <div style="margin-top:4px;">
+          An independent, data-first approach to understanding cars and utes in the Australian market.
+        </div>
+        <div style="margin-top:4px;font-size:0.76rem;">
+          Nothing on this site is financial, legal or personalised advice. Always combine our tools and stories with
+          your own test drives, inspections and professional guidance before making purchase decisions.
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#vehicles">Vehicles</a>
+        <a href="#tools">Tools</a>
+        <a href="#data-rankings">Data &amp; Rankings</a>
+        <a href="#stories">Stories</a>
+        <a href="#forum">Forum</a>
+        <a href="#brands">Brands</a>
+        <a href="#about">About &amp; disclaimer</a>
+        <a href="ute-calculator.html">Ute calculator</a>
+      </div>
+    </div>
+  </footer>
 </body>
+</html>

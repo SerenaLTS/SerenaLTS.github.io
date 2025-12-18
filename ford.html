@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Ford Ranger Review (Australia, 2025) – Auto Insight Lab</title>
-  <meta name="description" content="A structured, plain-English synthesis of what public reviews consistently say about the Ford Ranger in Australia (2025), with a single-vehicle scorecard visualisation." />
+  <meta name="description" content="A structured, plain-English synthesis of what public reviews consistently say about the Ford Ranger in Australia (2025), with data snapshot + single-vehicle scorecard visualisation." />
   <style>
     :root{
       --bg:#020617;
@@ -255,7 +255,7 @@
     .label-warn{border-color: rgba(249,115,22,0.8); color:#fed7aa}
 
     /* =========================
-       Integrated single-vehicle visualisation styles
+       Integrated visualisation styles
        ========================= */
     .viz-wrap{
       margin: 14px 0 6px;
@@ -282,7 +282,7 @@
     }
     .score-row{
       display:grid;
-      grid-template-columns: 140px 1fr 70px;
+      grid-template-columns: 160px 1fr 78px;
       gap: 10px;
       align-items:center;
       padding: 7px 0;
@@ -315,6 +315,52 @@
       font-variant-numeric: tabular-nums;
       white-space:nowrap;
     }
+
+    /* Data snapshot cards */
+    .snap-grid{
+      margin-top: 10px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .snap{
+      border: 1px solid rgba(100,116,139,0.85);
+      border-radius: 14px;
+      padding: 10px 10px;
+      background: rgba(2,6,23,0.35);
+    }
+    .snap-k{
+      font-size: 0.74rem;
+      color: var(--muted);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .snap-v{
+      font-size: 1.06rem;
+      font-weight: 750;
+      color:#f9fafb;
+      line-height: 1.25;
+    }
+    .snap-n{
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color:#cbd5f5;
+      opacity:0.9;
+    }
+    .sources{
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(51,65,85,0.85);
+      font-size: 0.9rem;
+      color:#cbd5f5;
+    }
+    .sources a{
+      color:#93c5fd;
+      text-decoration:none;
+    }
+    .sources a:hover{text-decoration:underline}
+
     .pill-list{
       display:flex;
       flex-direction:column;
@@ -378,9 +424,10 @@
     @media (max-width: 900px){
       .grid-2{grid-template-columns: 1fr}
       .viz-wrap{grid-template-columns: 1fr;}
-      .score-row{grid-template-columns: 120px 1fr 64px;}
+      .score-row{grid-template-columns: 140px 1fr 64px;}
       .nav-inner{gap:10px}
       .nav-links{gap:12px}
+      .snap-grid{grid-template-columns: 1fr;}
     }
   </style>
 </head>
@@ -409,8 +456,8 @@
       <h1>Ford Ranger Review (Australia, 2025)</h1>
       <p class="sub">
         This page collects recurring themes from widely available public reviews and aligns them with a simple,
-        single-vehicle scorecard—so you can see where the Ranger tends to shine, where trade-offs appear, and
-        what to check before you decide.
+        data snapshot + single-vehicle scorecard—so you can see where the Ranger tends to shine, where trade-offs appear,
+        and what to check before you decide.
       </p>
 
       <div class="meta-row">
@@ -421,7 +468,7 @@
 
       <div class="btn-row">
         <a class="btn-primary" href="ute-calculator.html">Open the Ute Calculator</a>
-        <a class="btn-ghost" href="#visuals">Jump to the scorecard</a>
+        <a class="btn-ghost" href="#visuals">Jump to the data snapshot</a>
       </div>
     </section>
 
@@ -454,7 +501,7 @@
           <li>We do <strong>not</strong> conduct physical testing.</li>
           <li>We do <strong>not</strong> claim exclusive insights.</li>
           <li>We <strong>do</strong> organise recurring themes from public reviews and ownership discussions.</li>
-          <li>We <strong>do</strong> present a clear “scorecard-style snapshot” to support shortlisting.</li>
+          <li>We <strong>do</strong> show a “data snapshot” (objective) + a “scorecard” (indicative).</li>
         </ul>
         <p>
           The goal is simple: reduce noise. When many sources describe similar strengths (or similar concerns),
@@ -510,36 +557,66 @@
         </div>
       </section>
 
-      <!-- 5 (INTEGRATED VISUALISATION) -->
+      <!-- 5 (DATA SNAPSHOT + SCORECARD) -->
       <section class="section" id="visuals">
-        <div class="sk">Single-vehicle snapshot</div>
-        <h2>5) Ford Ranger scorecard (quick visual)</h2>
+        <div class="sk">Data snapshot + scorecard</div>
+        <h2>5) Ford Ranger quick snapshot (objective data) + scorecard</h2>
         <p>
-          Below is a single-vehicle scorecard to help you think in “trade-offs” rather than hype.
-          It’s a snapshot view intended for shortlisting—not a replacement for test drives, quotes, and official specs.
+          To avoid “only vibes”, here’s an objective snapshot first (safety scores + key capability numbers),
+          followed by a simple scorecard view you can use for shortlisting.
         </p>
 
         <div class="viz-wrap">
-          <!-- LEFT: scorecard -->
-          <section class="viz-card" aria-label="Ford Ranger scorecard">
-            <h3 class="viz-title">Scorecard</h3>
+          <!-- LEFT: ANCAP breakdown -->
+          <section class="viz-card" aria-label="Ford Ranger ANCAP breakdown">
+            <h3 class="viz-title">Safety snapshot (ANCAP categories)</h3>
             <p class="viz-sub">
-              A simple, readable view of strengths and trade-offs. Scores are indicative and can be revised as public information changes.
+              These are category scores (percent) from ANCAP-reported results for the current Ranger model.
             </p>
-            <div id="scorecard"></div>
+            <div id="ancapBars"></div>
+
+            <div class="snap-grid" aria-label="Capability snapshot cards">
+              <div class="snap">
+                <div class="snap-k">Braked towing</div>
+                <div class="snap-v" id="towingVal">—</div>
+                <div class="snap-n">Variant-dependent maximum</div>
+              </div>
+              <div class="snap">
+                <div class="snap-k">GCM</div>
+                <div class="snap-v" id="gcmVal">—</div>
+                <div class="snap-n">Gross Combined Mass</div>
+              </div>
+              <div class="snap">
+                <div class="snap-k">Warranty</div>
+                <div class="snap-v" id="warrantyVal">—</div>
+                <div class="snap-n">Australia market terms</div>
+              </div>
+            </div>
+
+            <div class="sources">
+              <strong>Sources:</strong>
+              <ul style="margin:8px 0 0 18px">
+                <li><a href="https://howsafeisyourcar.com.au/ford/ranger/2025" target="_blank" rel="noopener">How Safe Is Your Car – Ranger (ANCAP category %)</a></li>
+                <li><a href="https://media.ford.com/content/dam/fordmedia/pdf/AU_Ford_Ranger_Brochure.pdf" target="_blank" rel="noopener">Ford Ranger brochure (towing / GCM)</a></li>
+                <li><a href="https://www.ford.com.au/help/warranty/newvehiclewarranty/" target="_blank" rel="noopener">Ford Australia – New Vehicle Warranty</a></li>
+              </ul>
+            </div>
           </section>
 
-          <!-- RIGHT: key strengths pills -->
-          <aside class="viz-card" aria-label="Ford Ranger key strengths">
-            <h3 class="viz-title">Key strengths</h3>
-            <p class="viz-sub">Use this like a checklist for your own needs.</p>
-            <div id="pillList" class="pill-list"></div>
-          </aside>
-        </div>
+          <!-- RIGHT: scorecard (indicative) -->
+          <aside class="viz-card" aria-label="Ford Ranger scorecard">
+            <h3 class="viz-title">Shortlist scorecard (indicative)</h3>
+            <p class="viz-sub">
+              This part is a readable “trade-off” view (0–10). It’s not an official rating.
+            </p>
+            <div id="scorecard"></div>
 
-        <div class="callout" style="margin-top:12px">
-          <strong>Tip:</strong> if you want a ranking outcome based on your own priorities (e.g., heavy towing vs family daily),
-          open the <a href="ute-calculator.html" style="color:#93c5fd; text-decoration:none;">Ute Calculator</a> and adjust weightings.
+            <div class="callout" style="margin-top:12px">
+              <strong>Tip:</strong> for an adjustable ranking outcome, open the
+              <a href="ute-calculator.html" style="color:#93c5fd; text-decoration:none;">Ute Calculator</a>
+              and change the weights based on your use case.
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -614,30 +691,64 @@
   </footer>
 
   <script>
-    // ✅ No ute database used here.
-    // Fill in your own indicative scores for Ford Ranger only.
-    // Scale: 0–10 (recommended for “review-style” scorecards).
-    const SCALE_MAX = 10;
+    /**
+     * ✅ Objective data snapshot sources (see links on page):
+     * - ANCAP category % (current Ranger model): Adult 84, Child 93, VRU 74, Safety Assist 83
+     * - Ford Ranger brochure (AU): "up to 3,500kg braked towing", GCM up to 6,000kg (variant-dependent)
+     * - Ford AU warranty page: 5 years, unlimited kilometres (terms apply)
+     */
 
-    // === Edit these two arrays to match the story you want ===
+    // ---- Objective data (percent / key numbers) ----
+    const ANCAP = [
+      { name: "Adult Occupant", value: 84 },
+      { name: "Child Occupant", value: 93 },
+      { name: "Vulnerable Road User", value: 74 },
+      { name: "Safety Assist", value: 83 }
+    ];
+
+    const KEY_NUMBERS = {
+      towing: "Up to 3,500kg (braked)",
+      gcm: "Up to 6,000kg",
+      warranty: "5 years (unlimited km)"
+    };
+
+    // ---- Indicative scorecard (0–10) ----
+    const SCALE_MAX = 10;
     const RANGER_SCORES = [
       { name: "Comfort",     score: 8.5 },
       { name: "Performance", score: 8.3 },
       { name: "Technology",  score: 8.1 },
-      { name: "Safety",      score: 8.0 },
+      { name: "Safety",      score: 8.2 },
       { name: "Towing/Work", score: 8.2 },
       { name: "Value",       score: 7.4 },
       { name: "Ownership",   score: 7.2 }
     ];
 
-    const RANGER_PILLS = [
-      { name: "Daily usability", score: 8.5, note: "Comfort + refinement are frequently highlighted." },
-      { name: "All-round capability", score: 8.3, note: "A strong baseline for work + family + towing." },
-      { name: "Tech & safety", score: 8.0, note: "Modern assistance features are part of the pitch." },
-      { name: "Ownership realism", score: 7.2, note: "Keep an eye on running costs and complexity." }
-    ];
+    function pct(v, max=100){ return Math.max(0, Math.min(100, (v / max) * 100)); }
 
-    function pct(v){ return Math.max(0, Math.min(100, (v / SCALE_MAX) * 100)); }
+    function renderAncap(){
+      const el = document.getElementById("ancapBars");
+      if(!el) return;
+      el.innerHTML = "";
+
+      ANCAP.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "score-row";
+        row.innerHTML = `
+          <div class="score-name">${item.name}</div>
+          <div class="score-bar"><div class="score-fill" style="width:${pct(item.value,100)}%"></div></div>
+          <div class="score-val">${item.value}%</div>
+        `;
+        el.appendChild(row);
+      });
+
+      const towingEl = document.getElementById("towingVal");
+      const gcmEl = document.getElementById("gcmVal");
+      const warrantyEl = document.getElementById("warrantyVal");
+      if(towingEl) towingEl.textContent = KEY_NUMBERS.towing;
+      if(gcmEl) gcmEl.textContent = KEY_NUMBERS.gcm;
+      if(warrantyEl) warrantyEl.textContent = KEY_NUMBERS.warranty;
+    }
 
     function renderScorecard(){
       const el = document.getElementById("scorecard");
@@ -649,36 +760,16 @@
         row.className = "score-row";
         row.innerHTML = `
           <div class="score-name">${item.name}</div>
-          <div class="score-bar"><div class="score-fill" style="width:${pct(item.score)}%"></div></div>
+          <div class="score-bar"><div class="score-fill" style="width:${pct(item.score, SCALE_MAX)}%"></div></div>
           <div class="score-val">${item.score.toFixed(1)}/${SCALE_MAX}</div>
         `;
         el.appendChild(row);
       });
     }
 
-    function renderPills(){
-      const el = document.getElementById("pillList");
-      if(!el) return;
-      el.innerHTML = "";
-
-      RANGER_PILLS.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "pill-card";
-        card.innerHTML = `
-          <div class="pill-top">
-            <div class="pill-name">${p.name}</div>
-            <div class="pill-score">${p.score.toFixed(1)}/${SCALE_MAX}</div>
-          </div>
-          <div class="pill-meter"><div style="width:${pct(p.score)}%"></div></div>
-          <div class="pill-note">${p.note}</div>
-        `;
-        el.appendChild(card);
-      });
-    }
-
     window.addEventListener("DOMContentLoaded", () => {
+      renderAncap();
       renderScorecard();
-      renderPills();
     });
   </script>
 </body>

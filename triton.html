@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mitsubishi Triton Review (Australia, 2025) – Auto Insight Lab</title>
+  <meta name="description" content="A structured, plain-English synthesis of what public reviews consistently say about the Mitsubishi Triton in Australia (2025), with data snapshot + single-vehicle scorecard visualisation." />
+  <style>
+    :root{
+      --bg:#020617;
+      --card: rgba(15, 23, 42, 0.98);
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --border: rgba(148, 163, 184, 0.45);
+      --accent:#60a5fa;
+      --accent2:#f97316;
+      --ok:#22c55e;
+      --radius-lg:18px;
+      --radius-md:12px;
+      --shadow: 0 22px 60px rgba(15, 23, 42, 0.78);
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.28), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(15,23,42,0.98), transparent 60%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .nav{
+      position: sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.90));
+      border-bottom: 1px solid rgba(30,64,175,0.6);
+    }
+    .nav-inner{
+      max-width: 1180px;
+      margin:0 auto;
+      padding: 14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      font-size: 0.92rem;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:650; letter-spacing:0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      white-space:nowrap;
+    }
+    .brand-mark{
+      width: 28px; height: 28px; border-radius: 6px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(148,163,184,0.85);
+      position: relative;
+      overflow:hidden;
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.9), 0 8px 18px rgba(15,23,42,0.9);
+    }
+    .brand-mark::before{
+      content:"";
+      position:absolute; left:-30%; top:50%;
+      width:160%; height:2px;
+      background: linear-gradient(90deg, var(--accent2), #facc15, var(--ok));
+      opacity:0.85;
+    }
+    .nav-links{
+      display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-link{
+      text-decoration:none;
+      color: var(--muted);
+      font-size: 0.88rem;
+      position:relative;
+      padding: 4px 0;
+    }
+    .nav-link:hover{color: var(--text)}
+    .nav-pill{
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.90);
+      border: 1px solid rgba(148,163,184,0.70);
+      font-size: 0.78rem;
+      color: var(--text);
+      display:inline-flex; align-items:center; gap:8px;
+      white-space:nowrap;
+    }
+    .nav-pill::before{
+      content:"";
+      width:7px; height:7px; border-radius:999px;
+      background: var(--ok);
+      box-shadow: 0 0 8px rgba(34,197,94,0.9);
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 24px auto 60px;
+      padding: 0 18px 40px;
+    }
+
+    .hero{
+      background: radial-gradient(circle at top left, rgba(96,165,250,0.12), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(249,115,22,0.10), transparent 55%),
+                  var(--card);
+      border: 1px solid rgba(100,116,139,0.85);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      overflow:hidden;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 4px 10px 4px 6px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(148,163,184,0.70);
+      color: #cbd5f5;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+    }
+    .kicker-dot{
+      width: 18px; height:18px; border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f9fafb, var(--accent));
+      box-shadow: 0 0 0 2px rgba(15,23,42,0.7);
+    }
+    h1{
+      margin: 14px 0 8px;
+      font-size: clamp(2.0rem, 3.4vw, 2.6rem);
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+      font-weight: 780;
+      background: linear-gradient(135deg, #e5e7eb, #bfdbfe);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .sub{
+      margin: 0 0 12px;
+      color: #cbd5f5;
+      font-size: 0.98rem;
+      max-width: 70ch;
+    }
+    .meta-row{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.92);
+      border: 1px solid rgba(148,163,184,0.70);
+    }
+    .btn-row{
+      margin-top: 14px;
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+    }
+    .btn-primary{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#0b1220;
+      font-weight: 650;
+      text-decoration:none;
+      box-shadow: 0 14px 40px rgba(15,23,42,0.9);
+      border: none;
+    }
+    .btn-primary::after{content:"→"}
+    .btn-ghost{
+      display:inline-flex; align-items:center; gap:8px;
+      color: var(--text);
+      text-decoration:none;
+      opacity: 0.9;
+      font-size: 0.92rem;
+      padding: 8px 2px;
+    }
+    .btn-ghost::after{content:"↧"; font-size: 0.95rem}
+    .btn-ghost:hover{opacity:1}
+
+    article{
+      margin-top: 18px;
+      background: rgba(15,23,42,0.92);
+      border: 1px solid rgba(100,116,139,0.85);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 10px;
+    }
+    .section{
+      padding: 10px 2px 14px;
+      border-top: 1px solid rgba(51,65,85,0.85);
+    }
+    .section:first-child{border-top:none; padding-top:0}
+    .sk{
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    h2{
+      margin: 0 0 8px;
+      font-size: 1.30rem;
+      letter-spacing: 0.01em;
+      font-weight: 720;
+      color: #f9fafb;
+    }
+    h3{
+      margin: 12px 0 6px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color:#f9fafb;
+    }
+    p{margin: 6px 0 10px; color:#e5e7eb; font-size: 0.98rem}
+    ul,ol{margin: 8px 0 10px 20px; color:#e5e7eb}
+    li{margin: 6px 0}
+    .callout{
+      margin: 10px 0 12px;
+      padding: 12px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(148,163,184,0.60);
+      background: rgba(2,6,23,0.55);
+      color:#e5e7eb;
+      font-size: 0.95rem;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card{
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(100,116,139,0.85);
+      background: rgba(15,23,42,0.98);
+      padding: 12px 12px;
+    }
+    .label{
+      display:inline-flex;
+      font-size: 0.74rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      color: #e5e7eb;
+      margin-bottom: 6px;
+    }
+    .label-ok{border-color: rgba(34,197,94,0.7); color:#bbf7d0}
+    .label-warn{border-color: rgba(249,115,22,0.8); color:#fed7aa}
+
+    /* =========================
+       Integrated visualisation styles
+       ========================= */
+    .viz-wrap{
+      margin: 14px 0 6px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+    }
+    .viz-card{
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(100,116,139,0.85);
+      border-radius: 14px;
+      padding: 12px 12px 14px;
+    }
+    .viz-title{
+      margin: 0 0 4px;
+      font-size: 1.02rem;
+      font-weight: 720;
+      color: #f9fafb;
+    }
+    .viz-sub{
+      margin: 0 0 10px;
+      font-size: 0.86rem;
+      color: #9ca3af;
+    }
+    .score-row{
+      display:grid;
+      grid-template-columns: 160px 1fr 78px;
+      gap: 10px;
+      align-items:center;
+      padding: 7px 0;
+      border-top: 1px solid rgba(51,65,85,0.85);
+    }
+    .score-row:first-child{border-top:none}
+    .score-name{
+      font-size: 0.9rem;
+      color:#e5e7eb;
+      font-weight: 650;
+    }
+    .score-bar{
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(2,6,23,0.55);
+      border: 1px solid rgba(148,163,184,0.35);
+      overflow:hidden;
+      position:relative;
+    }
+    .score-fill{
+      height:100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #60a5fa, #f97316);
+      width: 50%;
+    }
+    .score-val{
+      text-align:right;
+      font-size: 0.88rem;
+      color:#cbd5f5;
+      font-variant-numeric: tabular-nums;
+      white-space:nowrap;
+    }
+
+    /* Data snapshot cards */
+    .snap-grid{
+      margin-top: 10px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .snap{
+      border: 1px solid rgba(100,116,139,0.85);
+      border-radius: 14px;
+      padding: 10px 10px;
+      background: rgba(2,6,23,0.35);
+    }
+    .snap-k{
+      font-size: 0.74rem;
+      color: var(--muted);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .snap-v{
+      font-size: 1.06rem;
+      font-weight: 750;
+      color:#f9fafb;
+      line-height: 1.25;
+    }
+    .snap-n{
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color:#cbd5f5;
+      opacity:0.9;
+    }
+    .sources{
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(51,65,85,0.85);
+      font-size: 0.9rem;
+      color:#cbd5f5;
+    }
+    .sources a{
+      color:#93c5fd;
+      text-decoration:none;
+    }
+    .sources a:hover{text-decoration:underline}
+
+    .footer{
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 18px 28px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      border-top: 1px solid rgba(30,64,175,0.55);
+    }
+    .footer a{color:#93c5fd; text-decoration:none}
+    .footer a:hover{text-decoration:underline}
+
+    @media (max-width: 900px){
+      .grid-2{grid-template-columns: 1fr}
+      .viz-wrap{grid-template-columns: 1fr;}
+      .score-row{grid-template-columns: 140px 1fr 64px;}
+      .nav-inner{gap:10px}
+      .nav-links{gap:12px}
+      .snap-grid{grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Auto Insight Lab</span>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.html#tools">Tools</a>
+        <a class="nav-link" href="index.html#stories">Stories</a>
+        <a class="nav-link" href="about.html">About</a>
+        <span class="nav-pill">Australia • 2025</span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="kicker"><span class="kicker-dot" aria-hidden="true"></span>Structured synthesis (not a test drive)</div>
+      <h1>Mitsubishi Triton Review (Australia, 2025)</h1>
+      <p class="sub">
+        This page collects recurring themes from widely available public reviews and aligns them with a simple,
+        data snapshot + single-vehicle scorecard—so you can see where the Triton tends to shine, where trade-offs appear,
+        and what to check before you decide.
+      </p>
+
+      <div class="meta-row">
+        <div class="pill">Segment: Dual-cab ute</div>
+        <div class="pill">Best for: Value-minded all-rounders</div>
+        <div class="pill">Use: Read → sanity-check → compare</div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn-primary" href="ute-calculator.html">Open the Ute Calculator</a>
+        <a class="btn-ghost" href="#visuals">Jump to the data snapshot</a>
+      </div>
+    </section>
+
+    <article>
+      <!-- 1 -->
+      <section class="section">
+        <div class="sk">Why this vehicle matters</div>
+        <h2>1) Why the Mitsubishi Triton stays relevant in Australia</h2>
+        <p>
+          The Triton has long been a volume player in Australia’s dual-cab ute market: often pitched as a
+          practical alternative to the top sellers, with a strong focus on value, everyday usability, and
+          real-world capability. In a segment where many buyers want one vehicle to handle commuting, family duties,
+          towing and occasional off-road work, “good enough everywhere” can be the winning strategy.
+        </p>
+        <p>
+          This article doesn’t try to be the final word. Instead, it summarises patterns that show up across
+          public road tests and ownership discussion: what tends to get praised, what tends to frustrate people,
+          and what you should verify for your own usage.
+        </p>
+      </section>
+
+      <!-- 2 -->
+      <section class="section">
+        <div class="sk">Method (plain English)</div>
+        <h2>2) How this summary is built</h2>
+        <div class="callout">
+          <strong>How to read this page:</strong> a structured summary of publicly available specs, safety results and published reviews — organised so you can compare and shortlist.<br/>
+          <strong>Use it for:</strong> a clearer starting point before quotes, inspections and test drives.
+        </div>
+
+        <ul>
+          <li><strong>Sources-first:</strong> key numbers come from official or widely cited public references (linked below).</li>
+          <li><strong>Snapshot + context:</strong> objective figures are shown alongside common themes from road tests and ownership discussion.</li>
+          <li><strong>Indicative scorecard:</strong> the 0–10 scores are a simple “trade-off view” to support shortlisting, not an official rating.</li>
+          <li><strong>Always verify:</strong> specs can vary by variant, year and option pack — confirm with the manufacturer or dealer before purchase.</li>
+        </ul>
+
+        <p>
+          The goal is simple: reduce noise. When many sources describe similar strengths (or similar concerns),
+          those patterns matter—then you can decide how much each factor should matter <em>for you</em>.
+        </p>
+      </section>
+
+      <!-- 3 -->
+      <section class="section">
+        <div class="sk">Consensus themes</div>
+        <h2>3) What public reviews consistently agree on</h2>
+
+        <h3>3.1 Stronger “segment matching” towing headline than older Tritons</h3>
+        <p>
+          A recurring theme in coverage of the latest-generation Triton is that the towing figure now looks
+          closer to the segment benchmark, which matters to buyers comparing against the usual heavy-hitters.
+          That headline number is important—but it still needs the usual real-world checks (payload, towball download,
+          accessories, and how you actually tow).
+        </p>
+
+        <h3>3.2 Practical cabin, clear controls, and daily drivability</h3>
+        <p>
+          Many reviewers frame the Triton as a ute that’s easy to live with: reasonable ergonomics,
+          a straightforward cabin layout, and a “work + life” balance that suits mixed usage.
+        </p>
+
+        <h3>3.3 A lot of safety tech — but tuning matters</h3>
+        <p>
+          Reviews often note a strong suite of active safety features, while also highlighting that calibration
+          (how alerts behave, how systems intervene) can shape the day-to-day experience more than the feature list itself.
+        </p>
+      </section>
+
+      <!-- 4 -->
+      <section class="section">
+        <div class="sk">Where opinions split</div>
+        <h2>4) Where the trade-offs show up</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="label label-warn">Safety system behaviour (driver monitoring / alerts)</div>
+            <p style="margin-top:6px">
+              One of the most common “love it or hate it” areas in road tests is how some driver assistance systems behave
+              in real driving—especially if alerts feel too frequent or intrusive. This is exactly the kind of thing
+              you should experience in a test drive, not just read about.
+            </p>
+          </div>
+          <div class="card">
+            <div class="label label-warn">Variant spread & spec differences</div>
+            <p style="margin-top:6px">
+              Like many modern utes, the Triton range can vary a lot by grade and configuration.
+              The best outcome usually comes from deciding your real use case first (towing frequency, payload needs,
+              rear-seat usage, work accessories), then matching the variant to the job.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 (DATA SNAPSHOT + SCORECARD) -->
+      <section class="section" id="visuals">
+        <div class="sk">Data snapshot + scorecard</div>
+        <h2>5) Mitsubishi Triton quick snapshot (objective data) + scorecard</h2>
+        <p>
+          To avoid “only vibes”, here’s an objective snapshot first (safety scores + key capability numbers),
+          followed by a simple scorecard view you can use for shortlisting.
+        </p>
+
+        <div class="viz-wrap">
+          <!-- LEFT: ANCAP breakdown -->
+          <section class="viz-card" aria-label="Mitsubishi Triton ANCAP breakdown">
+            <h3 class="viz-title">Safety snapshot (ANCAP categories)</h3>
+            <p class="viz-sub">
+              These are category scores (percent) from ANCAP-reported results for the current Triton model.
+            </p>
+            <div id="ancapBars"></div>
+
+            <div class="snap-grid" aria-label="Capability snapshot cards">
+              <div class="snap">
+                <div class="snap-k">Braked towing</div>
+                <div class="snap-v" id="towingVal">—</div>
+                <div class="snap-n">Variant-dependent maximum</div>
+              </div>
+              <div class="snap">
+                <div class="snap-k">GCM</div>
+                <div class="snap-v" id="gcmVal">—</div>
+                <div class="snap-n">Gross Combined Mass</div>
+              </div>
+              <div class="snap">
+                <div class="snap-k">Warranty</div>
+                <div class="snap-v" id="warrantyVal">—</div>
+                <div class="snap-n">Australia market terms</div>
+              </div>
+            </div>
+
+            <div class="sources">
+              <strong>Sources:</strong>
+              <ul style="margin:8px 0 0 18px">
+                <li>
+                  <a href="https://howsafeisyourcar.com.au/mitsubishi/triton/2024" target="_blank" rel="noopener">
+                    How Safe Is Your Car – Mitsubishi Triton (ANCAP category %)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.carexpert.com.au/car-reviews/2024-mitsubishi-triton-gls-review" target="_blank" rel="noopener">
+                    CarExpert – 2024 Triton GLS review (braked towing / GCM / warranty figures)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ancap.com.au/safety-ratings/mitsubishi/triton" target="_blank" rel="noopener">
+                    ANCAP – Mitsubishi Triton (rating page)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- RIGHT: scorecard (indicative) -->
+          <aside class="viz-card" aria-label="Mitsubishi Triton scorecard">
+            <h3 class="viz-title">Shortlist scorecard (indicative)</h3>
+            <p class="viz-sub">
+              This part is a readable “trade-off” view (0–10). It’s not an official rating.
+            </p>
+            <div id="scorecard"></div>
+
+            <div class="callout" style="margin-top:12px">
+              <strong>Tip:</strong> for an adjustable ranking outcome, open the
+              <a href="ute-calculator.html" style="color:#93c5fd; text-decoration:none;">Ute Calculator</a>
+              and change the weights based on your use case.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="section">
+        <div class="sk">Who it suits</div>
+        <h2>6) Who the Mitsubishi Triton is most likely to suit</h2>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="label label-ok">Best suited for</div>
+            <ul style="margin:8px 0 0 20px">
+              <li>Buyers prioritising <strong>value + capability</strong> rather than “top trim prestige”.</li>
+              <li>Owners who want <strong>segment-competitive towing headline</strong> with a practical daily ute.</li>
+              <li>People who can spend time choosing the right <strong>variant</strong> for their workload and family use.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="label label-warn">May be less ideal for</div>
+            <ul style="margin:8px 0 0 20px">
+              <li>Drivers who are very sensitive to <strong>alert-heavy</strong> driver assistance behaviour.</li>
+              <li>Buyers wanting the most polished “SUV-like” refinement above all.</li>
+              <li>People who don’t want to deal with variant-by-variant spec differences.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="section">
+        <div class="sk">Bottom line</div>
+        <h2>7) Final perspective (without the hype)</h2>
+        <p>
+          The Triton’s appeal is usually not about winning every category. It’s about being a strong all-rounder
+          for buyers who care about practical capability and value, with modern safety equipment and an up-to-date spec sheet.
+        </p>
+        <p>
+          The most useful question isn’t “Is the Triton the best ute?” but:
+          <strong>“Is this Triton variant the best match for how I really use my ute?”</strong>
+          If you answer that clearly, the shortlist gets much easier.
+        </p>
+      </section>
+
+      <!-- 8 -->
+      <section class="section">
+        <div class="sk">Disclaimer</div>
+        <h2>Important note</h2>
+        <p>
+          This page is informational only and summarises public themes. Always confirm specifications and safety ratings with official sources,
+          and combine any shortlist with test drives, quotes, finance, insurance, and your own professional advice.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:flex-start; justify-content:space-between;">
+      <div>
+        <div style="font-weight:650; color:#f9fafb;">Auto Insight Lab</div>
+        <div style="margin-top:6px; max-width: 72ch;">
+          An independent, data-first project that organises public automotive information for Australia.
+          We structure what’s already out there into tools, tables, and readable summaries.
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="index.html">Home</a>
+        <a href="ute-calculator.html">Ute Calculator</a>
+        <a href="about.html">About & Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /**
+     * ✅ Objective data snapshot sources (see links on page):
+     * - ANCAP category %: How Safe Is Your Car (Mitsubishi Triton 2024 listing)
+     * - Towing / GCM / Warranty: CarExpert 2024 Triton GLS review (has comparative table with these fields)
+     */
+
+    // ---- Objective data (percent / key numbers) ----
+    // ANCAP category scores (percent)
+    const ANCAP = [
+      { name: "Adult Occupant", value: 86 },
+      { name: "Child Occupant", value: 89 },
+      { name: "Vulnerable Road User", value: 73 },
+      { name: "Safety Assist", value: 70 }
+    ];
+
+    // Key numbers (variant-dependent)
+    // From CarExpert comparative table: braked towing 3,500kg; GCM 6,210–6,250kg; warranty 10 years / 200,000km (conditional)
+    const KEY_NUMBERS = {
+      towing: "3,500kg (braked)",
+      gcm: "6,210–6,250kg",
+      warranty: "10 years / 200,000km (conditional)"
+    };
+
+    // ---- Indicative scorecard (0–10) ----
+    const SCALE_MAX = 10;
+    const TRITON_SCORES = [
+      { name: "Comfort",     score: 7.8 },
+      { name: "Performance", score: 7.9 },
+      { name: "Technology",  score: 7.7 },
+      { name: "Safety",      score: 8.0 },
+      { name: "Towing/Work", score: 8.0 },
+      { name: "Value",       score: 8.2 },
+      { name: "Ownership",   score: 7.6 }
+    ];
+
+    function pct(v, max=100){ return Math.max(0, Math.min(100, (v / max) * 100)); }
+
+    function renderAncap(){
+      const el = document.getElementById("ancapBars");
+      if(!el) return;
+      el.innerHTML = "";
+
+      ANCAP.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "score-row";
+        row.innerHTML = `
+          <div class="score-name">${item.name}</div>
+          <div class="score-bar"><div class="score-fill" style="width:${pct(item.value,100)}%"></div></div>
+          <div class="score-val">${item.value}%</div>
+        `;
+        el.appendChild(row);
+      });
+
+      const towingEl = document.getElementById("towingVal");
+      const gcmEl = document.getElementById("gcmVal");
+      const warrantyEl = document.getElementById("warrantyVal");
+      if(towingEl) towingEl.textContent = KEY_NUMBERS.towing;
+      if(gcmEl) gcmEl.textContent = KEY_NUMBERS.gcm;
+      if(warrantyEl) warrantyEl.textContent = KEY_NUMBERS.warranty;
+    }
+
+    function renderScorecard(){
+      const el = document.getElementById("scorecard");
+      if(!el) return;
+      el.innerHTML = "";
+
+      TRITON_SCORES.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "score-row";
+        row.innerHTML = `
+          <div class="score-name">${item.name}</div>
+          <div class="score-bar"><div class="score-fill" style="width:${pct(item.score, SCALE_MAX)}%"></div></div>
+          <div class="score-val">${item.score.toFixed(1)}/${SCALE_MAX}</div>
+        `;
+        el.appendChild(row);
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      renderAncap();
+      renderScorecard();
+    });
+  </script>
+</body>
+</html>

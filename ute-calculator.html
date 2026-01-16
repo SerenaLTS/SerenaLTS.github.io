@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Australia Ute Calculator – Data-Driven Shortlist for 2025</title>
   <style>
     :root {
-      /* 更偏汽车 / 工业感的配色 */
-      --bg: #020617;          /* 深夜蓝 */
+      /* More automotive / industrial colour tone */
+      --bg: #020617;
       --bg-alt: #020617;
       --card: #020617;
       --card-soft: #050816;
       --muted: #9CA3AF;
       --border: rgba(148, 163, 184, 0.35);
-      --accent: #2563EB;      /* 蓝 – 技术/理性 */
+      --accent: #2563EB;
       --accent-strong: #1D4ED8;
-      --accent-warm: #F97316; /* 橙 – 工地/机械 */
+      --accent-warm: #F97316;
       --danger: #F97373;
       --radius-lg: 20px;
       --radius-md: 12px;
       --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.7);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -35,6 +34,8 @@
       color: #E5E7EB;
       line-height: 1.6;
     }
+
+    a { color: inherit; }
 
     /* Top nav */
     .nav {
@@ -57,6 +58,7 @@
       font-size: 0.9rem;
     }
 
+    /* Make brand clickable back to homepage */
     .brand {
       display: flex;
       align-items: center;
@@ -65,20 +67,23 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-size: 0.8rem;
+      text-decoration: none;
+      color: inherit;
+      white-space: nowrap;
     }
 
     .brand-mark {
       width: 28px;
       height: 28px;
       border-radius: 6px;
-      background:
-        linear-gradient(135deg, #0F172A, #1E293B);
+      background: linear-gradient(135deg, #0F172A, #1E293B);
       border: 1px solid rgba(148, 163, 184, 0.8);
       position: relative;
       box-shadow:
         0 0 0 1px rgba(15, 23, 42, 0.9),
         0 8px 18px rgba(15, 23, 42, 0.9);
       overflow: hidden;
+      flex: 0 0 auto;
     }
 
     .brand-mark::before {
@@ -96,6 +101,8 @@
       display: flex;
       gap: 18px;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-link {
@@ -104,6 +111,7 @@
       font-size: 0.86rem;
       padding: 4px 0;
       position: relative;
+      white-space: nowrap;
     }
 
     .nav-link::after {
@@ -118,13 +126,8 @@
       transition: width 0.2s ease;
     }
 
-    .nav-link:hover {
-      color: #E5E7EB;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
+    .nav-link:hover { color: #E5E7EB; }
+    .nav-link:hover::after { width: 100%; }
 
     .nav-pill {
       padding: 5px 11px;
@@ -136,6 +139,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
 
     .nav-pill::before {
@@ -163,9 +167,7 @@
       margin-bottom: 32px;
     }
 
-    .hero-left {
-      color: #E5E7EB;
-    }
+    .hero-left { color: #E5E7EB; }
 
     .hero-kicker {
       display: inline-flex;
@@ -223,9 +225,7 @@
       border: 1px solid rgba(148, 163, 184, 0.7);
     }
 
-    .hero-pill span {
-      white-space: nowrap;
-    }
+    .hero-pill span { white-space: nowrap; }
 
     /* CTA under hero text */
     .hero-cta-row {
@@ -252,10 +252,7 @@
       text-decoration: none;
     }
 
-    .hero-btn-primary::after {
-      content: "→";
-      font-size: 1rem;
-    }
+    .hero-btn-primary::after { content: "→"; font-size: 1rem; }
 
     .hero-btn-primary:hover {
       filter: brightness(1.04);
@@ -271,21 +268,19 @@
       align-items: center;
       gap: 6px;
       opacity: 0.9;
+      white-space: nowrap;
     }
 
-    .hero-btn-secondary::after {
-      content: "↧";
-      font-size: 0.9rem;
-    }
+    .hero-btn-secondary::after { content: "↧"; font-size: 0.9rem; }
+    .hero-btn-secondary:hover { opacity: 1; }
 
-    .hero-btn-secondary:hover {
-      opacity: 1;
-    }
+    /* A "Back to home" secondary link variant */
+    .hero-btn-home::after { content: "←"; }
+    .hero-btn-home { opacity: 0.82; }
 
     /* Right hero card - Default ranking */
     .hero-right {
-      background:
-        linear-gradient(145deg, #020617, #020617);
+      background: linear-gradient(145deg, #020617, #020617);
       border-radius: 18px;
       border: 1px solid rgba(100, 116, 139, 0.8);
       padding: 18px 18px 16px;
@@ -316,6 +311,8 @@
       color: #F9FAFB;
       position: relative;
       z-index: 1;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .hero-score-pill {
@@ -325,6 +322,7 @@
       background: rgba(15, 23, 42, 0.96);
       border: 1px solid rgba(191, 219, 254, 0.7);
       color: #E5E7EB;
+      white-space: nowrap;
     }
 
     .hero-card-sub {
@@ -356,9 +354,7 @@
       align-items: center;
     }
 
-    .hero-top-item:nth-child(odd) {
-      background: rgba(15, 23, 42, 0.9);
-    }
+    .hero-top-item:nth-child(odd) { background: rgba(15, 23, 42, 0.9); }
 
     .hero-top-rank {
       font-size: 0.72rem;
@@ -367,6 +363,7 @@
       background: #020617;
       border: 1px solid rgba(148, 163, 184, 0.95);
       color: #F9FAFB;
+      white-space: nowrap;
     }
 
     .hero-top-score {
@@ -388,6 +385,7 @@
       background: rgba(37, 99, 235, 0.16);
       border: 1px solid rgba(59, 130, 246, 0.8);
       color: #BFDBFE;
+      white-space: nowrap;
     }
 
     .hero-cta {
@@ -407,9 +405,7 @@
     }
 
     /* Article layout: single column */
-    .article {
-      margin-top: 14px;
-    }
+    .article { margin-top: 14px; }
 
     .article-card {
       background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 1));
@@ -465,17 +461,6 @@
       margin: 12px 0;
     }
 
-    .inline-badge {
-      display: inline-block;
-      padding: 2px 6px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      background: rgba(37, 99, 235, 0.16);
-      color: #BFDBFE;
-      border: 1px solid rgba(59, 130, 246, 0.8);
-      margin-left: 4px;
-    }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -504,13 +489,9 @@
       color: #E5E7EB;
     }
 
-    td {
-      color: #E5E7EB;
-    }
+    td { color: #E5E7EB; }
 
-    tbody tr:nth-child(even) {
-      background: rgba(15, 23, 42, 0.9);
-    }
+    tbody tr:nth-child(even) { background: rgba(15, 23, 42, 0.9); }
 
     /* Calculator card */
     .calculator-card {
@@ -549,10 +530,13 @@
       margin: 0;
       font-size: 1.14rem;
       color: #F9FAFB;
+      position: relative;
+      z-index: 1;
     }
 
     .calculator-sub {
       position: relative;
+      z-index: 1;
       font-size: 0.88rem;
       color: var(--muted);
       max-width: 520px;
@@ -560,6 +544,7 @@
 
     .weights {
       position: relative;
+      z-index: 1;
       margin-top: 10px;
       background: rgba(15, 23, 42, 0.98);
       border-radius: var(--radius-md);
@@ -573,10 +558,7 @@
       gap: 10px;
     }
 
-    label {
-      color: #E5E7EB;
-      font-size: 0.86rem;
-    }
+    label { color: #E5E7EB; font-size: 0.86rem; }
 
     input[type="number"] {
       margin-top: 4px;
@@ -606,6 +588,7 @@
 
     .btn-row {
       position: relative;
+      z-index: 1;
       margin-top: 10px;
       display: flex;
       gap: 8px;
@@ -631,14 +614,12 @@
       gap: 6px;
     }
 
-    #calc-btn::after {
-      content: "↻";
-      font-size: 0.9rem;
-    }
+    #calc-btn::after { content: "↻"; font-size: 0.9rem; }
 
     #calc-btn:hover {
       filter: brightness(1.05);
       transform: translateY(-1px);
+      transition: all 0.15s ease;
     }
 
     #reset-btn {
@@ -647,9 +628,7 @@
       border: 1px solid rgba(148, 163, 184, 0.9);
     }
 
-    #reset-btn:hover {
-      background: rgba(15, 23, 42, 0.95);
-    }
+    #reset-btn:hover { background: rgba(15, 23, 42, 0.95); }
 
     #weight-warning {
       font-size: 0.8rem;
@@ -664,52 +643,24 @@
       z-index: 1;
     }
 
-    #result-table tbody tr:first-child td:first-child {
-      color: #4ADE80;
-      font-weight: 700;
-    }
-
-    #result-table tbody tr:nth-child(2) td:first-child {
-      color: #A3E635;
-      font-weight: 600;
-    }
-
-    #result-table tbody tr:nth-child(3) td:first-child {
-      color: #22C55E;
-      font-weight: 600;
-    }
+    #result-table tbody tr:first-child td:first-child { color: #4ADE80; font-weight: 700; }
+    #result-table tbody tr:nth-child(2) td:first-child { color: #A3E635; font-weight: 600; }
+    #result-table tbody tr:nth-child(3) td:first-child { color: #22C55E; font-weight: 600; }
 
     /* Responsive */
     @media (max-width: 960px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-right {
-        order: -1;
-      }
-      .hero-cta-row {
-        margin-bottom: 6px;
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-right { order: -1; }
+      .hero-cta-row { margin-bottom: 6px; }
     }
 
     @media (max-width: 640px) {
-      .page {
-        padding-inline: 14px;
-      }
-      .article-card,
-      .calculator-card {
-        padding-inline: 16px;
-      }
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .nav-inner {
-        padding-inline: 14px;
-      }
-      .hero-meta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .page { padding-inline: 14px; }
+      .article-card, .calculator-card { padding-inline: 16px; }
+      .hero-title { font-size: 2.2rem; }
+      .nav-inner { padding-inline: 14px; }
+      .hero-meta { flex-direction: column; align-items: flex-start; }
+      .nav-links { gap: 14px; }
     }
   </style>
 </head>
@@ -717,11 +668,14 @@
   <!-- Top nav -->
   <div class="nav">
     <div class="nav-inner">
-      <div class="brand">
+      <!-- Brand (clickable back to homepage) -->
+      <a class="brand" href="index.html" aria-label="Back to homepage">
         <div class="brand-mark"></div>
         <span>Ute Insight Lab</span>
-      </div>
+      </a>
+
       <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="#calculator-section" class="nav-link">Interactive calculator</a>
         <span class="nav-pill">2025 Data-Driven Shortlist</span>
       </div>
@@ -754,8 +708,10 @@
             <span>Open ute calculator</span>
           </a>
           <a href="#calculator-section" class="hero-btn-secondary">Skip to ranking table</a>
+          <a href="index.html" class="hero-btn-secondary hero-btn-home">Back to home</a>
         </div>
       </div>
+
       <aside class="hero-right">
         <div class="hero-card-title">
           <span>Default ranking</span>
@@ -1074,118 +1030,27 @@
 
     // ===== Static data =====
     const UTE_DATA = [
-      {
-        brand_model: "JAC T9",
-        sales_tier: "C",
-        ReliabilityScore: 81.11346427388636,
-        SafetyScore: 93.42376470588236,
-        EconomyScore: 93.0,
-        PerformanceScore: 78.35534986669349
-      },
-      {
-        brand_model: "Mitsubishi Triton",
-        sales_tier: "A",
-        ReliabilityScore: 84.33940175064713,
-        SafetyScore: 86.40447060000001,
-        EconomyScore: 80.0,
-        PerformanceScore: 92.3
-      },
-      {
-        brand_model: "LDV Terron 9/MG U9",
-        sales_tier: "C",
-        ReliabilityScore: 74.65,
-        SafetyScore: 93.85094120000001,
-        EconomyScore: 82.49,
-        PerformanceScore: 74.09347826086957
-      },
-      {
-        brand_model: "GWM Cannon",
-        sales_tier: "B",
-        ReliabilityScore: 74.79578872,
-        SafetyScore: 80.86401274,
-        EconomyScore: 86.8,
-        PerformanceScore: 74.08149303284873
-      },
-      {
-        brand_model: "Kia Tasman",
-        sales_tier: "C",
-        ReliabilityScore: 79.6,
-        SafetyScore: 86.48411764705882,
-        EconomyScore: 58.93,
-        PerformanceScore: 86.60697218169928
-      },
-      {
-        brand_model: "Mazda BT-50",
-        sales_tier: "B",
-        ReliabilityScore: 77.12379339514781,
-        SafetyScore: 83.00503184713376,
-        EconomyScore: 62.69,
-        PerformanceScore: 89.63730569948186
-      },
-      {
-        brand_model: "Isuzu D-Max",
-        sales_tier: "A",
-        ReliabilityScore: 81.05665473313493,
-        SafetyScore: 83.72044585987261,
-        EconomyScore: 63.14,
-        PerformanceScore: 68.40579710144928
-      },
-      {
-        brand_model: "BYD SHARK 6",
-        sales_tier: "C",
-        ReliabilityScore: 70.5,
-        SafetyScore: 87.78129411764706,
-        EconomyScore: 65.25,
-        PerformanceScore: 37.492753623188406
-      },
-      {
-        brand_model: "Toyota Hilux",
-        sales_tier: "S",
-        ReliabilityScore: 73.29591971698562,
-        SafetyScore: 88.84459459459461,
-        EconomyScore: 38.42,
-        PerformanceScore: 71.05558629709743
-      },
-      {
-        brand_model: "Volkswagen Amarok",
-        sales_tier: "B",
-        ReliabilityScore: 72.93484704441663,
-        SafetyScore: 86.68783439490446,
-        EconomyScore: 20.38,
-        PerformanceScore: 83.36139896373058
-      },
-      {
-        brand_model: "Ford Ranger",
-        sales_tier: "S",
-        ReliabilityScore: 71.40964152430564,
-        SafetyScore: 86.18923566878982,
-        EconomyScore: 5.64,
-        PerformanceScore: 82.09406912
-      },
-      {
-        brand_model: "Jeep Gladiator",
-        sales_tier: "C",
-        ReliabilityScore: 68.51530683,
-        SafetyScore: 62.263513513513516,
-        EconomyScore: 0.0,
-        PerformanceScore: 4.42
-      }
+      { brand_model: "JAC T9", sales_tier: "C", ReliabilityScore: 81.11346427388636, SafetyScore: 93.42376470588236, EconomyScore: 93.0, PerformanceScore: 78.35534986669349 },
+      { brand_model: "Mitsubishi Triton", sales_tier: "A", ReliabilityScore: 84.33940175064713, SafetyScore: 86.40447060000001, EconomyScore: 80.0, PerformanceScore: 92.3 },
+      { brand_model: "LDV Terron 9/MG U9", sales_tier: "C", ReliabilityScore: 74.65, SafetyScore: 93.85094120000001, EconomyScore: 82.49, PerformanceScore: 74.09347826086957 },
+      { brand_model: "GWM Cannon", sales_tier: "B", ReliabilityScore: 74.79578872, SafetyScore: 80.86401274, EconomyScore: 86.8, PerformanceScore: 74.08149303284873 },
+      { brand_model: "Kia Tasman", sales_tier: "C", ReliabilityScore: 79.6, SafetyScore: 86.48411764705882, EconomyScore: 58.93, PerformanceScore: 86.60697218169928 },
+      { brand_model: "Mazda BT-50", sales_tier: "B", ReliabilityScore: 77.12379339514781, SafetyScore: 83.00503184713376, EconomyScore: 62.69, PerformanceScore: 89.63730569948186 },
+      { brand_model: "Isuzu D-Max", sales_tier: "A", ReliabilityScore: 81.05665473313493, SafetyScore: 83.72044585987261, EconomyScore: 63.14, PerformanceScore: 68.40579710144928 },
+      { brand_model: "BYD SHARK 6", sales_tier: "C", ReliabilityScore: 70.5, SafetyScore: 87.78129411764706, EconomyScore: 65.25, PerformanceScore: 37.492753623188406 },
+      { brand_model: "Toyota Hilux", sales_tier: "S", ReliabilityScore: 73.29591971698562, SafetyScore: 88.84459459459461, EconomyScore: 38.42, PerformanceScore: 71.05558629709743 },
+      { brand_model: "Volkswagen Amarok", sales_tier: "B", ReliabilityScore: 72.93484704441663, SafetyScore: 86.68783439490446, EconomyScore: 20.38, PerformanceScore: 83.36139896373058 },
+      { brand_model: "Ford Ranger", sales_tier: "S", ReliabilityScore: 71.40964152430564, SafetyScore: 86.18923566878982, EconomyScore: 5.64, PerformanceScore: 82.09406912 },
+      { brand_model: "Jeep Gladiator", sales_tier: "C", ReliabilityScore: 68.51530683, SafetyScore: 62.263513513513516, EconomyScore: 0.0, PerformanceScore: 4.42 }
     ];
 
     // Sales tier -> SalesScore
-    const RAW_SALES_SCORE = {
-      "S": 100.0,
-      "A": 22.0,
-      "B": 16.0,
-      "C": 2.0
-    };
+    const RAW_SALES_SCORE = { "S": 100.0, "A": 22.0, "B": 16.0, "C": 2.0 };
 
     function tierToSalesScore(tier) {
       if (tier == null) return 2.0;
       let t = String(tier).trim().toUpperCase();
-      if (!(t in RAW_SALES_SCORE)) {
-        t = "C";
-      }
+      if (!(t in RAW_SALES_SCORE)) t = "C";
       return RAW_SALES_SCORE[t];
     }
 
@@ -1213,7 +1078,7 @@
       const w_reliability = parseFloat(document.getElementById("w-reliability").value) || 0;
       const w_sales = parseFloat(document.getElementById("w-sales").value) || 0;
 
-      let sum = w_safety + w_economy + w_performance + w_reliability + w_sales;
+      const sum = w_safety + w_economy + w_performance + w_reliability + w_sales;
       const warningEl = document.getElementById("weight-warning");
 
       if (sum <= 0) {
@@ -1265,17 +1130,12 @@
       const results = UTE_DATA.map(car => {
         const salesScore = tierToSalesScore(car.sales_tier);
         const finalScore = calcFinalScore(car, weights);
-        return {
-          ...car,
-          SalesScore: salesScore,
-          FinalScore: finalScore
-        };
+        return { ...car, SalesScore: salesScore, FinalScore: finalScore };
       }).sort((a, b) => b.FinalScore - a.FinalScore);
 
       renderTable(results);
     }
 
-    // Init: apply default weights and calculate once
     window.addEventListener("DOMContentLoaded", () => {
       applyDefaultWeightsToInputs();
       recalcAndRender();
